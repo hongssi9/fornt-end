@@ -1,0 +1,60 @@
+#container{
+    background-color: grey;
+    width:  aouto;  
+    height: 100px;
+    /* 방 전체를 할당하는 백그라운드 크기를 정해준다 */
+
+    display: flex; 
+    /* display: flex;를 쓰게되면 한 문자만을 쓴다 (주석 풀었다 사용했다 이해해보기) */
+    
+    flex-direction: row;
+    /* flex-direction:  */
+    /* column : 세로 */
+    /* row-reverse -> 가로 역방향*/
+    /* column-reverse -> 세로 역방향 */
+    /* 지정하지않으면 flex-direction은 기본으로 row라는 기본값을 갖게 된다.(reverse가 반대로 간다는..) */
+
+}
+
+#container>div{
+    flex-grow: 1;
+    /* flex-grow: 1; ->  백그라운드 옆에있는 여백을 꽉채움*/
+    /* 박스들이 n분의1로 공평하게 나눠갖는다. */
+    /* 박스가 5개있으니까 grow1로 하면 백그라운드 공간을 1/5로 가져간다 */
+}   
+
+#container>div.box1{
+    background-color: red;
+}
+
+#container>div.box2{
+    background-color: orange;
+    flex-basis: 300px;
+    /* 박스의 크기를 지정해준다 */
+    /* 그니까 컨테이너가 박스 크기보다 작아지면 box2는 자기몸을 희생해서 줄어드는거  */
+
+    /* flex-grow: 2; */
+    /* #container>div grow크기가 0이 된다면 box2 grow가 1이 되어도 모든 칸을 가져간다  */
+    /* grow2를 하게 되면 전체6크기 공간을 예혼자 2/6를 가져간다 */
+}
+
+#container>div.box3{
+    background-color: yellow;
+    flex-shrink: 0;
+    /* flex-shrink: ; -> basis와 반대로 컨테이너가 박스크기보다 작아져도 box3은 자기 몸을 줄이지 않고 꿋꿋하게 버틴다(아래 스크롤바가 생기는이유) */
+    /* shrink는 줄어든다라는 뜻이 있음 줄어듬을 0으로 주니까 줄지않고 다시1로 주면 줄어든다 */
+}
+
+#container>div.box4{
+    background-color: blue;
+    flex-shrink: 2;
+    /* box4와 box5 모두 shrink를 주었다 */
+    /* box4는 5개 공간중 2만큼 줄어든다 */
+}
+
+#container>div.box5{
+    background-color: indigo;
+    flex-shrink: 3;
+    /* box5는 5개 공간중 3만큼 줄어든다 */
+    /* box5가 더 많이 줄어든다. */
+}

@@ -1,0 +1,65 @@
+
+#container{
+    background-color: gray;
+    --width:500px;
+    height: 100px;
+
+    display: flex;
+    /* display는 컨테이너만 사용하는, 그안쪽에 있는box1...5는 아이템이라고 생각 */
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    
+    /* flex-flow: row wrap; */
+    /* align-content: center; */
+    /* 축약형 */
+
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    align-content: center;
+
+}
+
+#container>div{
+    /* flex-basis: 100px; */
+    width: 100px;
+    /* flex-grow: 1; */
+}
+
+#container>div.box1{
+     background-color: greenyellow;
+    /* flex-basis: 100px;
+    flex-shrink: 1; 
+    flex-grow: 0;  */
+    
+    
+            /* 몇개의 방이 아닌 몇으로 비율     */
+}
+#container>div.box2{
+    background-color: green;
+    /* flex: initial 2 100px; */
+    /* flex: 0 2 100px; */
+    align-self: flex-start;
+
+
+}
+#container>div.box3{
+    background-color: yellow;
+    /* flex-grow: 1; */
+    
+    
+}
+#container>div.box4{
+    background-color: red;
+    /* flex-grow: 1;
+    order: -1;  */
+    /* order: -1; 순서를 지정해준다 */
+    align-self: flex-end;
+
+}
+#container>div.box5{
+    background-color: blue;
+    /* --flex-grow: 2; */
+
+}
+
+/* #container>.box{$}*5 */
