@@ -1,47 +1,55 @@
 html{
-    font-size: 20px;
+    height: 100%;
 }
  
  
- body{
+body{
     margin: 0px;
-    /* margin방과 방 사이에 있는 빈 공간 */
-    font-size: 20px;
-
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
 }
 
 /* ------------------------------------------------ */
 
 .float-content{
-    background-color: blueviolet;
+    
     width: 960px;
     margin-left: auto;
     margin-right: auto;
-    height: 50%;
+    height: 100%;
     min-height: inherit;
     opacity: 0.7;
 }
 
 #header{
     
-    /* em은 폰트사이즈를 배로 늘린다 */
-    /* em은 이 구역에서 설정된 폰트 사이즈 기준!! */
-    font-size: 70px;
-    background-color: yellow;
+    
+   height: 70px;
+    
+    
 }
 
 #visual{
-    background-color: red;
-    /* font-size: 1rem; */
-    /* rem은 다른 폰트사이즈 설정에 영향을 받지 않는다 */
-    /* rem은 최상위 html폰트 사이즈에서만 적용!! */
-    height: 171;
+    
+    height: 171px;
+    border-top: 3px solid #8cba34;
+    background:#313131 url("../images/bg-visual.png") no-repeat center;
+
+    
 }
 
 
 #body{
-    background-color: green;
+    
     min-height: 300px;
+
+    flex-grow: 1;
+
+    border-top: 5px solid #8cba34;
+    margin-top: 1px;
+    
+
 }
 
 #body>.float-content{
@@ -51,22 +59,20 @@ html{
 #aside{
     width: 205px;
     height: inherit;
-    background-color: yellow;
+    
+    
 }
-
+  
 main{
-    width: 755;
-    height: inherit;
-    background-color: red;
+    width: 755px;
+    min-height: inherit;
+    overflow: scroll;
+    background: url("../images/1.jpg") no-repeat;
 }
 
-/* min함수는 비교가 가능한 값이 주어졌을때 더 작은값을 쓴다.
-2.상속받았을 경우 ex) min(100px,60%) 부모 크기가100px이면 자식의 값은
-60%인 60px가 된다 */
-
-/* 자식은 min 을 상속받을 수 없다 하려면 같이 min을 써라 */
 
 #footer{
-    background-color: blue;
+    background-color: #313131;
     height: 100px;
+    /* flex-grow: 1; */
 }
