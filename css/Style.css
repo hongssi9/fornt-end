@@ -17,15 +17,20 @@ body{
     width: 960px;
     margin-left: auto;
     margin-right: auto;
-    height: 100%;
+    height: 100%; 
     min-height: inherit;
-    opacity: 0.7;
+    opacity: 0.7; /* 투명도 */
 }
 
-#header{
-    
-    
+#header{  
    height: 70px;
+   position: sticky;
+   /* 형이 static이면 못빠져나가는데 absolute나 fixed면 빠져나갈수있음 */
+   left: 100px; 
+   /* 앱솔르드와 스티키를 주면 겹친다 */
+   top:100px;
+   z-index: 999;
+   background-color: white;
     
     
 }
@@ -70,6 +75,42 @@ main{
     background: url("../images/1.jpg") no-repeat;
 }
 
+    #quick-manu{
+        background-color: aqua;
+        
+        position: relative; 
+        
+        /* static 미리 정해진 위치로 가기때문에 위치를 정할 수 없음 */
+        /* absolute 절대위치 */
+        /* relative : 본래 자신이 있던 위치에서 움직임 */
+        left: 100px;
+        top: 100px;
+    }
+
+    #box-container{
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+
+        position: relative;
+        /* 부모 relative */
+        /* relative는 본인이 원래 있던 위치로 지정해준다 */
+        
+    }
+
+    .box{
+        /* 자식 absolute */
+        position: absolute;
+        /* 부모한테 relative가 선언되어 있으니 부모한테 갇혀서 나오지못하고 그 위치에서 위치를 찾는다 */
+       /* fixed는 보고있는 현재 화면이 기준이되어 위치 설정(relative에 상속된 자식이라도 빠져나올수있음) */
+        left: 50px;
+        top: 50px;
+        transition: 1s;
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        
+    }
 
 #footer{
     background-color: #313131;
