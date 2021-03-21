@@ -1,0 +1,74 @@
+#root{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    
+}
+
+#root > *  { 
+    background-color: red;
+    grid-column: 1 / span 12;
+    
+}
+
+@media screen and (min-width: 500px) and (max-width:799px) {
+   #root > .side,
+   #root > .ad{
+       grid-column: 1 / span 3;
+   }
+
+   #root > .content,
+   #root > .main-footer{
+       grid-column: 4 / span 9;
+   }
+
+   #root > .side,
+   #root > .content
+   {
+       grid-row: 3;
+   }
+ 
+   #root > .ad,
+   #root > .main-footer{
+   grid-row: 4;
+}
+
+} 
+
+@media screen and (min-width: 800px){
+
+    #root > .main-nav{
+        grid-column: 1 / span2;
+    }
+
+    #root > .content{
+        grid-column: 3/ span 8;
+    }
+
+    #root > .side, #root > .ad{
+        grid-column: 11 / 13;
+    }
+
+    #root > .main-footer{
+        grid-column: 1/13;
+    }
+
+    #root > .main-nav, #root > .content{
+        grid-row: 2/4;
+    }
+
+    #root > .side{
+        grid-row: 2/3;
+    }
+
+    #root > .ad{
+        grid-row:  3/4;
+    }
+
+    #root > .main-nav > ul{
+        flex-direction: column;
+    }
+
+
+}
+
