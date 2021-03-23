@@ -1,13 +1,13 @@
 
 #container{
     background-color: gray;
-    --width:500px;
+    --width:500px;   /* width 주지않으면 늘어나는대로 영역이 늘어남 */
     height: 100px;
 
     display: flex;
     /* display는 컨테이너만 사용하는, 그안쪽에 있는box1...5는 아이템이라고 생각 */
     /* flex-direction: column; */
-    flex-wrap: wrap;
+    flex-wrap: wrap;   /* 영역에서 벗어나지않고 정렬 */
     
     /* flex-flow: row wrap; */
     /* align-content: center; */

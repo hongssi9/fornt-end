@@ -1,0 +1,64 @@
+.container{
+    display: flex;  /* 수평이 될 요소에다가 flex를 사용함 */
+                    /* 하나로 묶어주는 커다란 방을 컨테이너라고 표현하는것같다 */
+                    /* display: flex; 수직으로 쌓여진다
+                    display: inline-flex 수평으로 쌓여짐 */
+
+    flex-wrap: wrap;    
+    /* wrap : 창이 줄어들면 자동으로 아래로 정렬 */ 
+    /* 이것만 쓰면 창이 줄어들때 안이쁘게 왼쪽에 뚝 뚝 하고 내려만가니까
+    justify-content 를 같이 쓰면 가운데로 정렬하면서 아래로 내려간다. */
+    
+    gap: 10px;
+
+    justify-content: space-around;
+    /* justify-content : 아이템의 정렬 방법을 설정함.
+    flex-start : Items를 시작점(flex-start)으로 정렬
+    flex-end : Items를 끝점(flex-end)으로 정렬
+    space-around : Items를 균등한 여백을 포함하여 정렬
+    등등 몇개 더 있음 */
+
+    /* align-content: stretch; 정렬방법중 하나인것같은데 차이는 모르겠음 */
+    /* align-items: stretch;  */
+
+}
+
+
+
+
+/* ----------------------flex items-------------------------------- */
+.box1{
+    background-color: red;
+    width: 100px;
+    /* order: 1; 속성들 순서를 지정할수있음 */
+}
+
+.box2{
+    background-color: orange;
+    width: 100px;
+
+     /* flex-grow: 10; 넓이가 커지면 이 속성 넓이도 같이 커짐 
+     flex: 1 1 20px;  증가너비 감소너비 기본너비 
+    가로로 크기를 키울때 어느 항목에 크기가 커질지 조절할때 쓰기 좋을거같음 */
+    
+}
+
+.box3{
+    background-color: yellow;
+    width: 100px;
+}
+
+.box4{
+    background-color: green;
+    width: 100px;
+}
+
+.box5{
+    background-color: blue;
+    width: 100px;
+}
+
+.box6{
+    background-color: purple;
+    width: 100px;
+}
