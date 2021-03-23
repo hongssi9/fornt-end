@@ -9,17 +9,18 @@ body{
     margin: 0px;
 }
 
-
-
 #root > *  { 
     background-color: red;
     grid-column: 1 / span 12;
     
 }
 
-@media screen and (min-width: 500px) and (max-width:799px) {
+ @media screen and (min-width: 500px) and (max-width:799px) {
    #root > .side,
    #root > .ad{
+
+
+    
        grid-column: 1 / span 3;
    }
 

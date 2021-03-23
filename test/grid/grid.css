@@ -1,0 +1,16 @@
+#container{
+    display: grid;
+    grid-template-columns: 250px 250px;
+}
+
+.box1{
+    background-color: red;
+}
+
+.box2{
+    background-color: orange;
+}
+
+.box3{
+    background-color: yellow;
+}

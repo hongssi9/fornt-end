@@ -1,0 +1,52 @@
+html,body{
+    height: 100%;
+}
+
+#root{
+    display: grid;
+
+    /* 1고정 개수로 맞추기 */
+    /* grid-template-columns: 1fr 1ft 1fr;
+    grid-template-rows: 1ft 1ft;
+    height: 100%;
+
+    grid-template-columns: 1ft auto 1fr;
+    grid-template-columns: rapeat(3, auto);
+    grid-template-rows: 1fr 1fr;
+    height: 100%; */
+
+    /* 2. 고정 크기의 고정 개수 맞추기 */
+    /* grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    height: 100%; */
+
+    /* 고정 크기 단위 : min-content / max-content / fr / px,cm,em,%, / minmax */
+    /* grid-template-columns:  minmax(500px, 700px); */
+
+    /* 3.고정 크기의 개수는 미정(너비가 허락되는 한 모든 여백을 트랙을 만드시오)
+    grid-template-columns: repeat(auto-fill, minmax(100px,auto)); 
+    grid-template-rows: repeat(auto-fill, 100px);
+    height: 100%; */
+    
+    
+    /* 트랙을 준비하지않고 아이템에 맞추어서 배치하기 */
+    /* grid-template-columns: minmax(500px, 700px); */
+    /* grid-template-columns: minmax(500px, 700px); 500까지 줄어들고 700까지 커짐  */
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    grid-template-rows: repeat(auto-fit, 100px);
+    gap: 10px;
+    height: 100%;
+
+
+    /* 위에방법을 조금 간단한 버전으로 */
+    /* grid-auto-columns: minmax(100px, auto);
+    grid-auto-rows: 100px;
+    grid-auto-flow: column;
+    height: 100%; */
+
+}
+
+#root>div{
+    background-color: red;
+}

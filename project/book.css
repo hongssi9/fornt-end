@@ -1,0 +1,33 @@
+html,body{
+    height: 100%;
+    margin: 0;
+
+}
+
+body{
+    height: 100%;
+    margin: 0;
+  
+    
+}
+
+#header{
+    background-color: red;
+    height: 200px;
+
+}
+
+.login{
+    display: flex;
+    justify-content: space-around;
+}
+    
+
+
+#aside{
+    background-color: orange;
+}
+
+#main{
+    background-color: yellow;
+}
