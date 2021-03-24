@@ -1,0 +1,49 @@
+html,body{
+    height: 100%;
+  margin: 0;
+
+}
+
+#root{
+   display: grid;
+  height: 100%;
+   grid-template-areas: 
+   "a a a"  
+   "c c c"
+   "d d d";
+
+   grid-auto-rows: 1fr 2fr  2fr;
+}
+
+.box1{
+    background-color: red;
+    align-self: flex-start; 
+   grid-area: a;
+   height: 35%;
+    
+}
+
+.box2{
+    background-color: green;
+    align-self: center; 
+    grid-area: a;
+    height: 35%;
+
+}
+
+.box3{
+    background-color: blue;
+    align-self: flex-end;
+    grid-area: a;
+    height: 35%;
+}
+
+ .box4{
+    background-color: yellow;
+    grid-area: c;
+}
+
+.box5{
+    background-color: purple;
+    grid-area: d;
+} 

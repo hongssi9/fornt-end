@@ -33,20 +33,67 @@ html,body{
     /* grid-template-columns: minmax(500px, 700px); */
     /* grid-template-columns: minmax(500px, 700px); 500까지 줄어들고 700까지 커짐  */
 
-    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, auto));
     grid-template-rows: repeat(auto-fit, 100px);
     gap: 10px;
-    height: 100%;
+    height: 100%; */
 
 
     /* 위에방법을 조금 간단한 버전으로 */
+
+   grid-template-areas: 
+   "a a b"
+   "a a b"
+   "c d d";
+   /* "h h h h";    방이 4개  */
+   /* grid-auto-columns: 1fr 2fr;  4개 방에 1fr 크기와 2fr크기 두개만 있으니가 나머지 두개도 똑같이.
+   grid-auto-rows: 1fr; 아래는 똑같은 크기로 */
+   /* height: 100%; */
     /* grid-auto-columns: minmax(100px, auto);
     grid-auto-rows: 100px;
     grid-auto-flow: column;
     height: 100%; */
 
+    grid-auto-columns: 100px;
+    grid-auto-rows: 100px;
+    height: 100%;
+
+    /* 1. inline(수평) 축 정렬 */
+    /* justify-content: center; */
+    /* justify-items: stretch; */
+    /* justify-items: ; 그 안에있는 아이템이 각 칸 가운데에 들어간다 */
+
+    /* 2. block(수직) 축 정렬 */
+    /* align-content: center; */
+    /* align-items: flex-start; */
 }
 
-#root>div{
+.box1{
     background-color: red;
+    align-self: flex-start; 
+    /* 헤더에다가 크기를 나눠서 위치 정렬 가능할거같음 */
+   grid-area: a;
+   height: 50%;
+    
+    
+}
+
+.box2{
+    background-color: green;
+    align-self: flex-end; 
+    /* align-self: center; 아이템 위치를 정렬하는 속성 */
+    grid-area: a;
+    height: 50%;
+
+}
+
+.box3{
+    background-color: blue;
+    align-self: flex-end;
+    grid-area: c;
+}
+
+.box4{
+    background-color: yellow;
+    grid-area: d;
 }
