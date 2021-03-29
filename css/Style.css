@@ -15,6 +15,12 @@ ul{
     margin: 0;
 }
 
+ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 
 /* -------------------------------------------------------------------------------- */
 
@@ -43,7 +49,7 @@ ul{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 250px 750px 1fr;
-    grid-template-rows: 70px 171px 1fr 100px;
+    grid-template-rows: 400px 171px 1fr 100px;
     grid-template-areas: 
     "header header header header"
     "visual visual visual visual"
@@ -76,12 +82,12 @@ ul{
 }
 
 #aside{
-    background-color: blue;
+    /* background-color: blue; */
     grid-area: aside;
 }
 
 #main{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     
     grid-area: main;
 }
@@ -123,9 +129,95 @@ ul{
  
 }
 
-.main-menu{
+/* .main-menu{
     font-family: "맑은 고딕", "고딕", 'Franklin Gothic Medium', 'Arial Narrow', 'Arual', sans-serif;
     font-size: 15px;
     font-weight: bold;
     color: #000000;
+} */
+
+
+.main-menu>ul{
+    display: flex
+
 }
+
+.main-menu>ul>li{
+    padding-left: 24px;
+    background: url("../images/bg-main-menu-vsp.png")no-repeat 12px center;
+    /* li사이에 구분될수있게..... 12px로 가운데 */
+    
+   
+}
+
+/* .main-menu>ul>li.first{
+    padding-left: 0px;
+   background: none;
+
+} */
+
+.main-menu>ul>li:nth-child(1){
+    padding-left: 0px;
+    background: none;
+    /* 간단하게 몇번째를 선택할지를 고를 수 있다. */
+}
+
+.main-menu>ul>li>a:hover{
+    color: #e07a1a;
+    /* 링크에 마우스를 올렸을때 바뀌는 색 */
+}
+
+
+
+.member-menu>ul{
+    display: flex
+
+}
+
+.member-menu>ul>li{
+    padding-left: 24px;
+    background: url("../images/bg-member-menu-sp.png")no-repeat 9px center;
+  
+    font-family: "맑은 고딕";
+    /* font-style: "맑은 고딕"; */
+    font-weight: bold;
+    font-size: 10px;
+    
+   
+}
+
+.member-menu>ul>li:nth-child(1){
+    padding-left: 0px;
+    background: none;
+
+}
+
+.member-menu>ul>li>a:hover{
+    color: #979797;
+  
+}
+
+
+.breadcrumb>ol{
+    display: flex;
+}
+
+.breadcrumb>ol>li{
+    padding-left: 20px;
+    background: url("../images/icon-path.png")no-repeat 10px center;
+  
+  
+    font-weight: bold;
+    font-size: 10px;
+    
+   
+}
+
+.breadcrumb>ol>li:nth-child(1){
+
+    background: url("../images/iconHome.png")no-repeat 0px center;
+  
+   
+
+}
+
