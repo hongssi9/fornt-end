@@ -26,8 +26,16 @@ ol{
 
 /* 보여지기 싫은 */
 .d-none{
-    display: none;
+    display: none; 
+    /* !important 우선순위를 제일 앞에 둔다 */
 
+}
+/* ------------------------------------------------------------------ */
+
+.button{
+    display: inline-block;
+    text-indent: -999px;
+    overflow: hidden;
 }
 
 
@@ -49,7 +57,7 @@ ol{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 250px 750px 1fr;
-    grid-template-rows: 400px 171px 1fr 100px;
+    grid-template-rows: 500px 171px 1fr 100px;
     grid-template-areas: 
     "header header header header"
     "visual visual visual visual"
@@ -137,6 +145,7 @@ ol{
 } */
 
 
+
 .main-menu>ul{
     display: flex
 
@@ -168,6 +177,9 @@ ol{
 }
 
 
+.member-menu{
+    display: inline-block;
+}
 
 .member-menu>ul{
     display: flex
@@ -221,3 +233,35 @@ ol{
 
 }
 
+.customer-menu{
+
+    display: inline-block;
+}
+
+.customer-menu>ul{
+    display: flex;
+}
+
+    .customer-menu .mypage-buttonn {
+        background: url("../images/txt-mypage.png")no-repeat center;
+        
+        display: inline-block;
+        width: 72px;
+        height: 17px;
+        text-indent: -999px;
+        overflow: hidden;
+
+        /* width: 72px; text-indent: 50px; 둘다 블럭태그에만 적용이 가능한 속성이다 */
+    }
+
+    .customer-menu .customer-button{
+        background: url("../images/txt-customer.png")no-repeat center;
+        
+        display: inline-block;
+        width: 72px;
+        height: 17px;
+        text-indent: -999px;
+        overflow: hidden;
+
+        /* width: 72px; text-indent: 50px; 둘다 블럭태그에만 적용이 가능한 속성이다 */
+    }
