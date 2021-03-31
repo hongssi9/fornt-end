@@ -26,17 +26,16 @@
                             <li><a href="">AnswerIs</a></li>
                         </ul>
                     </nav>
-                    <section>
+
+                    <section class="lecture-search-form">
                         <h1 class="d-none">강좌검색폼</h1>
                         <form>
-                            과정검색
-                        </form>
-                    </section>
-
-                    <section>
-                        <h1>강좌검색폼</h1>
-                        <form>
-                            과정검색
+                            <fieldset> <!--폼 요소를 하나로 묶을때 사용-->
+                                <legend class="d-none">과정 검색 필드</legend>
+                                <label>과정검색</label> <!-- 설명란 -->
+                                <input type="text"> <!-- 텍스트 박스 -->
+                                <input class="button" type="submit" value="검색"> <!-- 버튼 value=버튼 텍스트-->
+                            </fieldset>
                         </form>
                     </section>
 

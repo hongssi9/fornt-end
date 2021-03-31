@@ -4,19 +4,20 @@ html,body{
 }
 
 a{
-    color:initial;
-    text-decoration: initial;
+    color:initial;  /*initial 속성의 초깃값(기본값)을 요소에 적용합니다. 초깃값은 브라우저가 지정합니다.*/
+    text-decoration: initial; /*text-decoration CSS 단축 속성은 글씨의 장식(선) 색을 지정합니다*/
+                              /*링크 아래에 -----선을 없애줌*/
 }
 
 /* ul은 옆에 패딩과 마진이 남게되어 둘다 0으로 */
 ul{
-    list-style: none;
-    padding: 0;
+    list-style: none; /*ul로 만들면 왼쪽에 점이 있는게 그 점을 없애줌*/
+    padding: 0; /*감싸진 ul밖에 paddinng이랑 margin이 있었음(잘 찾아보기)*/
     margin: 0;
 }
 
 ol{
-    list-style: none;
+    list-style: none; /*ol은 만들면 옆에 숫자가 뜨는데 그걸 없애줌*/
     padding: 0;
     margin: 0;
 }
@@ -33,9 +34,9 @@ ol{
 /* ------------------------------------------------------------------ */
 
 .button{
-    display: inline-block;
-    text-indent: -999px;
-    overflow: hidden;
+    display: inline-block; /*전후 줄바꿈 없이 나란히 배치가되고 inline에서 불가능하던 높이 너비 margin padding속성 지정이 가능해짐*/
+    text-indent: 90px; /*옆으로 내어쓰기*/
+    overflow: hidden; /*컨텐츠 크기가 레이아웃에서 벗어나면 어떻게 할 것이지를 정해주는 속성(스크롤을 만들것이냐, 빠져나온부분을 없앨것이냐등)*/
 }
 
 
@@ -137,12 +138,13 @@ ol{
  
 }
 
-/* .main-menu{
+.main-menu{
+    display: inline-block;
     font-family: "맑은 고딕", "고딕", 'Franklin Gothic Medium', 'Arial Narrow', 'Arual', sans-serif;
     font-size: 15px;
     font-weight: bold;
     color: #000000;
-} */
+}
 
 
 
@@ -232,6 +234,62 @@ ol{
    
 
 }
+
+.lecture-search-form{
+    display: inline-block;
+    width: 308px;
+    height: 25px;
+    border: 5px solid ;
+    border-color: #8CBA34;    
+    
+    
+}
+
+
+.lecture-search-form fieldset{
+    display: flex;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.lecture-search-form fieldset label{
+    font-size: 11px;
+    font-weight: bold;
+    width: 55px;
+
+
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+ 
+}
+
+
+.lecture-search-form fieldset input[type=text]{
+    flex-grow: 1;
+    border: 0;
+    /* text-indent: 5px; */
+    padding-left: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    color: blue;
+}
+
+.lecture-search-form fieldset input[type=submit]{
+    /* flex-basis: 31px; */
+    width: 31px;
+    height: 25px;
+    background: url("../images/btn-zoom.png")no-repeat center;
+    
+    border: 0px ;
+    border-left: 1px solid #8CBA34;    
+}
+
+
+
 
 .customer-menu{
 
