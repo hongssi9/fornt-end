@@ -54,11 +54,16 @@ ol{
 
 }
 
+#visual .float-content{
+    background:#313131 url("../images/customer/visual.png") no-repeat center;
+
+}
+
 #root{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 250px 750px 1fr;
-    grid-template-rows: 500px 171px 1fr 100px;
+    grid-template-rows: 70px 171px 1fr 100px;
     grid-template-areas: 
     "header header header header"
     "visual visual visual visual"
@@ -71,28 +76,38 @@ ol{
     grid-area: header;
 }
 
+#header>.float-content{
+    position: relative;
+}
+
 #visual{
     border-top:3px solid #8CBA34;
     background:#313131 url("../images/bg-visual.png") no-repeat center;
     grid-area: visual;
+    
 }
 
 #body{
-    border-top: 5px solid;
+    border-top: 5px solid #8CBA34;
     margin-top: 1px;
     grid-area: body;
 
+    
+}
+
+#body .float-content{
     display: grid;
     grid-template-columns: 1fr 205px 755px 1fr;
     grid-template-rows: 1fr;
-    
     grid-template-areas: ". aside main .";  
     /* 그리드 안쪽에 있는 바디에 또 한번 그리드를 채웠다 */
+    background:url("../images/bg-body.png") repeat-y center;
 }
 
 #aside{
     /* background-color: blue; */
     grid-area: aside;
+    background:url("../images/bg-aside-title.png") no-repeat;
 }
 
 #main{
@@ -144,6 +159,21 @@ ol{
     font-size: 15px;
     font-weight: bold;
     color: #000000;
+    position: absolute;
+    top: 27px;
+    left: 200px;
+}
+
+.logo{
+    margin: 0;
+    display: inline-block;
+    position: absolute;  /*relative/fixed/sticky*/
+    left: 0;
+    top: 23px;
+    /* 기준점이 달라서 left나 top이 각각 달라진다 */
+    /* absolute->문서기준 좌상단  relative->원위치 fixed->화면기준 좌상단 */
+    
+   
 }
 
 
@@ -181,6 +211,10 @@ ol{
 
 .member-menu{
     display: inline-block;
+
+    position: absolute;
+    right: 0px;  /**/
+    top: 21px;
 }
 
 .member-menu>ul{
@@ -241,6 +275,9 @@ ol{
     height: 25px;
     border: 5px solid ;
     border-color: #8CBA34;    
+    position: absolute;
+    top: 21px;
+    left: 468px;
     
     
 }
@@ -294,6 +331,9 @@ ol{
 .customer-menu{
 
     display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 40px;
 }
 
 .customer-menu>ul{
