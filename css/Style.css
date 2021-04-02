@@ -33,13 +33,25 @@ ol{
 }
 /* ------------------------------------------------------------------ */
 
-.button{
+.button,
+.icon,
+.img{
     display: inline-block; /*전후 줄바꿈 없이 나란히 배치가되고 inline에서 불가능하던 높이 너비 margin padding속성 지정이 가능해짐*/
     text-indent: 90px; /*옆으로 내어쓰기*/
     overflow: hidden; /*컨텐츠 크기가 레이아웃에서 벗어나면 어떻게 할 것이지를 정해주는 속성(스크롤을 만들것이냐, 빠져나온부분을 없앨것이냐등)*/
 }
 
+.img-notepubs{
+    background: url("../images/notepubs.png");
+    width: 180px;
+    height: 50px;
+}
 
+.img-namoolab{
+    background: url("../images/namoolab.png");
+    width: 180px;
+    height: 50px;
+}
 
 /* --------------------------------------------------------------- */
 .float-content{
@@ -172,6 +184,7 @@ ol{
     top: 23px;
     /* 기준점이 달라서 left나 top이 각각 달라진다 */
     /* absolute->문서기준 좌상단  relative->원위치 fixed->화면기준 좌상단 */
+    /*그냥 left나 top을 줘도 위치가 고정되어있기때문에 움직이지않는다 그래서 position을 정해줘야 원점이 어디인지 정해지고 위치를 조정할 수 있다.*/
     
    
 }
@@ -233,6 +246,47 @@ ol{
     
    
 }
+
+
+/* ---------------------------------고객센터메뉴 aside------------------------------------------ */
+#aside > h1{
+ 
+    display: inline-block;
+    font-family: "맑은 고딕", 고딕, 'Franklin Gothic Medium', 'Arial Narrow', 'Arual', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    
+    
+
+}
+
+.aside-main-menu a{
+    font-family: "맑은 고딕", 고딕, 'Franklin Gothic Medium', 'Arial Narrow', 'Arual', sans-serif;
+	font-weight: bold;
+	color: #808080;
+    font-size: 11px;
+	padding-left: 26px;   
+}
+
+.aside-main-menu a:hover,
+.aside-main-menu a.corrent
+{
+    background: url("../images/icon-current.png") no-repeat 12px center;
+    
+
+}
+
+.aside-main-menu li{
+	/* height: 26px; */
+    line-height: 26px;  /*줄 간격(높이)을 정해줌*/
+    background: url("../images/bg-aside-menu-hsp.png") no-repeat center bottom;
+
+
+
+}
+
+
 
 .member-menu>ul>li:nth-child(1){
     padding-left: 0px;
