@@ -1,0 +1,42 @@
+div{
+    width: 80px;
+    height: 80px;
+    /* margin-bottom: 20px; */
+    background: red;
+    margin-bottom: 10px;
+    /* display: block; */
+   
+}
+
+.container{
+    background: yellow;
+    left: 20px;
+    top: 20px;
+    position: relative;
+
+    /* absolute->절대좌표 그 박스 안ㅇ에서 위치를 기준으로 변경 */
+    /* fixed 완전 벗어난 최상위 페이지를 기준으로 변경 */
+    /* sticky 스크롤해도 그 위치에 고정된다. */
+    
+    
+}
+
+.box{
+    background: blue;
+    position: relative;  /*원래 있어야 할 자리에서 왼쪼에서20, 위에서20으로 옮겨간다.*/
+    left: 20px;
+    top: 20px;
+}
+
+
+
+
+
+ /*div 기본이 블록이고*/
+
+
+/*span은 기본이 인라인 태그이다*/
+                            /*인라인 디스플레이는 안에 내용이 있어야 보인다.*/
+                            /*안에 컨텐츠 크기만큼 크기가 늘어남*/
+
+ 

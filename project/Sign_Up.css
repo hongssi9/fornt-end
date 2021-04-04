@@ -12,7 +12,9 @@ main{
 }
 
 .table{
+  border: 0;
     height: 100%;
+    width: 50%;
 }
 
 
