@@ -1,0 +1,83 @@
+html,body{
+    height: 100%;
+    margin: 0;
+}
+
+ul{
+   list-style: none;
+   padding: 0;
+}
+
+a{
+    text-decoration: initial;
+    color: initial;
+}
+
+#root{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70px 4fr 1fr 100px;
+    grid-template-areas:
+    ". header header ."
+    ". main main ."
+    ". aside-home aside-login ."
+    ". . . ."
+    ;
+    /* gap: 10px; */
+}
+
+
+/* #header{
+    background-color: white;
+    grid-area: header;
+    height: 100%;
+}
+
+#header>.header-text{
+    position: relative;
+} */
+
+.header-text{
+    /* display: inline-block;
+    position: absolute; */
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    grid-area: header;
+    /* background: yellowgreen; */
+    height: 100%;
+}
+
+.header-text>ul{
+    display: flex
+
+}
+
+.header-text>ul>li{
+    /* display: flex; */
+    padding-left: 24px;
+    background: url("../images/bg-main-menu-vsp.png")no-repeat 12px center ;
+    /* li사이에 구분될수있게..... 12px로 가운데 */
+}
+
+.header-text>ul>li:nth-child(1){
+    padding-left: 0px;
+    background: none;
+    
+}
+
+.main{
+    grid-area: main;
+    background: royalblue;
+}
+
+.aside-home{
+    grid-area: aside-home;
+    background: skyblue;
+}
+
+.aside-login{
+    grid-area: aside-login;
+    background: thistle;
+}

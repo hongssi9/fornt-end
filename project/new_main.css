@@ -44,6 +44,7 @@ body {
     left: 50%;
     transform: translate(-50%);
     width: 50%;
+    /* height: 100%; */
 }
 
   /* absolute->절대좌표 그 박스 안ㅇ에서 위치를 기준으로 변경 */

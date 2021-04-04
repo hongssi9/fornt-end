@@ -1,0 +1,52 @@
+html,body{
+    height: 100%;
+    margin:0;
+}
+
+main{
+    display: flex;
+    height: 80%;
+    justify-content: center;
+    
+    
+}
+
+.table{
+  border: 0;
+    height: 100%;
+    width: 50%;
+}
+
+
+/* .emailbox{
+    padding: 0;
+    width: 1px;
+} */
+.Sign-Up{
+    
+  
+}
+
+#logo{
+    width: 500px;
+    height: 200px;
+    /* margin: 0; */
+}
+
+#header{
+    text-align: center;
+}
+
+.d-none{
+    display: none;
+    
+}
+.table-box{
+    height: 100%;
+    
+}
+
+
+
+
+

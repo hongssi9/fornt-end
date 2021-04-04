@@ -1,118 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lnag="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>북카인 회원가입</title>
+        <link href="../project/Sign_Up.css" type="text/css" rel="stylesheet">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="../project/Sign_Up.css" type="text/css" rel="stylesheet">
-</head>
+        
+    </head>
+    <body>
+        <!-- header -->
+        <div id="header">
+            <a href="메인화면링크" target="_blank" title="메인화면링크"><img src="/project/images/logo.png" id="logo"></a>
+        </div>                                                                      <!--target="_blank" 누르면 새창으로 열림 -->
 
-<body>
-<!-- -----------------------------------헤더-------------------------------- -->
-    <header id="header">
-        <a href="메인페이지 링크" title="북카인 메인페이지로 이동"><img src="../project/images/logo.png" id="logo"></a>
-    </header>
+        <div id="visual">                      
+        </div>
 
 
+        <!-- wrapper -->
+        <div id="wrapper">
 
-    <!-- ----------------------------------------메인------------------------------- -->
-    <main id="main">
-        <form id="userdata">
-        <fieldset class="table">  <!--폼을 하나로 묶어주는 테두리를 만듦-->
-            <legend class="d-none">회원정보</legend>
-            <table class="table-box">
-                <tbody> <!-- table안에 콘텐츠를 그룹화 하기 위하여 사용-->
-                    <tr>
-                        <th><label>이름</label></th>
-                        <td> <!-- colspan 칸 확장-->
-                            <input type="email" id="email" name="firstname" placeholder="이메일 ( ex@codepen.com)" onblur="ck_email()">
-                            <!-- <input type="button" value="중복확인"> -->
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><label>생년월일</label></th>
-                        <td>
-                            <input type="date">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th><label>성별</label></th>
-                        <td>
-                            <!--<input type="radio" checked>남  checked미리 체크
-                            <input type="radio">여-->
-                            <input type="checkbox" checked>남
-                            <input type="checkbox">여
-                        </td>
-                    </tr>
+            <!-- content-->
+            <div id="content">
 
-                    <tr>
-                        <th>아이디</th>
-                        <td>
-                            <input type="text">
-                            <input type="button" value="중복확인">
-                        </td>
-                    </tr>
+                <!-- ID -->
+                <div>
+                    <h3 class="join_title">
+                        <!-- <label for="id">아이디</label> -->
+                    </h3>
+                    <span class="box int_id">
+                        <input type="text" placeholder="아이디" id="id" class="int" maxlength="20">                    
+                    </span>
+                </div>
 
-                    <tr>
-                        <th>패스워드</th>
-                        <td><input type="password"></td>                        
-                    </tr>
+                <!-- PW1 -->
+                <div>
+                    <h3 class="join_title"></h3>
+                    <span class="box int_pass">
+                        <input type="text" placeholder="비밀번호" id="pswd1" class="int" maxlength="20">
+                        <!-- <img src="m_icon_pass.png" id="pswd1_img1" class="pswdImg"> -->
+                    </span>
+                    <!-- <span class="error_next_box"></span> -->
+                </div>
 
-                    <tr>
-                        <th>패스워드 확인</th>
-                        <td><input type="password"></td>
-                    </tr>
+                <!-- PW2 -->
+                <div>
+                    <h3 class="join_title"><!--<label for="pswd2">비밀번호 재확인</label>--></h3>
+                    <span class="box int_pass_check">
+                        <input type="text" placeholder="비밀번호 재확인" id="pswd2" class="int" maxlength="20">
+                        <!-- <img src="m_icon_check_disable.png" id="pswd2_img1" class="pswdImg"> -->
+                    </span>
+                    <!-- <span class="error_next_box"></span> -->
+                </div>
 
-                    <tr>
-                        <th><label>휴대전화</label></th>
-                        <td><input type="text"></td>
-                    </tr>
+                <!-- NAME -->
+                <div>
+                    <h3 class="join_title"><!--<label for="name">이름</label>--></h3>
+                    <span class="box int_name">
+                        <input type="text" placeholder="이름" id="name" class="int" maxlength="20">
+                    </span>
+                    <!-- <span class="error_next_box"></span> -->
+                </div>
 
-                    <tr>
-                        <th>이메일</th>
-                        <td class="emailbox"><input type="text"></td>
+                <!-- BIRTH -->
+                <div>
+                    <h3 class="join_title"><!--<label for="yy">생년월일</label>--></h3>
+                    <input type="date">
 
-                        <th><label>@</label></th>
-                        <td class="emailbox">
-                            <select class="width-half" name="gender" required>
-                                <option value="">선택</option>
-                                <option value="네이버">@naver.com</option>
-                                <option value="">@google.com</option>
-                                <!-- value는 선택될때 서버에 데이터가 제출된다 -->
-                            </select>
-                        </td>
-                    </tr>
+                    <div id="bir_wrap">
+                        <!-- BIRTH_YY -->
+                        <div id="bir_yy">
+                            <span class="box">
+                                <input type="text" id="yy" class="int" maxlength="4" placeholder="년(4자)">
+                            </span>
+                        </div>
+
+                        <!-- BIRTH_MM -->
+                        <div id="bir_mm">
+                            <span class="box">
+                                <select id="mm" class="sel">
+                                    <option>월</option>
+                                    <option value="01">1</option>
+                                    <option value="02">2</option>
+                                    <option value="03">3</option>
+                                    <option value="04">4</option>
+                                    <option value="05">5</option>
+                                    <option value="06">6</option>
+                                    <option value="07">7</option>
+                                    <option value="08">8</option>
+                                    <option value="09">9</option>                                    
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </span>
+                        </div>
+
+                        <!-- BIRTH_DD -->
+                        <div id="bir_dd">
+                            <span class="box">
+                                <input type="text" id="dd" class="int" maxlength="2" placeholder="일">
+                            </span>
+                        </div>
+
+                    </div>
+                    <!-- <span class="error_next_box"></span>     -->
+                </div>
+
+                <!-- GENDER -->
+                <div>
                     
-
-                    <tr id="Sign-Up">
-                        <td><input type="button" value="회원가입"></td>
-                    </tr>
+                    <h3 class="join_title"><label for="gender">성별</label></h3>
+                    <input type="checkbox" checked> 남자 
+                    <input type="checkbox"> 여자
+                    
                 
-                   
-                    <!--label 인터페이스 항몽의 설명을 나타냄-->
-                    
-                </tbody>
+                    <!-- <span class="box gender_code">
+                        <select id="gender" class="sel">
+                            <option>성별</option>
+                            <option value="M">남자</option>
+                            <option value="F">여자</option>
+                        </select>                            
+                    </span>
+                    <span class="error_next_box">필수 정보입니다.</span> -->
+                </div>
 
-             
+                <!-- MOBILE -->
+                <div>
+                    <h3 class="join_title"><label for="phoneNo">휴대전화(선택)</label></h3>
+                    <span class="box int_mobile">
+                        <input type="tel" id="mobile" class="int" maxlength="16" placeholder="선택입력">
+                    </span>
+                    <!-- <span class="error_next_box"></span>     -->
+                </div>
+
+                   <!-- EMAIL -->
+                   <div>
+                    <h3 class="join_title"><label for="email">본인확인 이메일<span class="optional">(선택)</span></label></h3>
+                    <span class="box int_email">
+                        <input type="text" id="email" class="int" maxlength="100" placeholder="선택입력">
+                    </span>
+                    <!-- <span class="error_next_box">이메일 주소를 다시 확인해주세요.</span>     -->
+                </div>
 
 
-            </table>
-        </fieldset>
-    </form>
+                <!-- JOIN BTN-->
+                <div class="btn_area">
+                    <button type="button" id="btnJoin">
+                        <span>회원가입 완료</span>
+                    </button>
+                </div>
 
+                
 
-    </main>
+            </div> 
+            <!-- content-->
 
-
-
-    <!-- --------------------------------푸터----------------------------------- -->
-    <!-- <footer id="footer">
-
-
-    </footer> -->
-
-</body>
-
+        </div> 
+        <!-- wrapper -->
+    <!-- <script src="main.js"></script> -->
+    </body>
 </html>
