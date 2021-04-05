@@ -4,52 +4,39 @@ html,body{
 }
 
 a{
-    color:initial;  /*initial 속성의 초깃값(기본값)을 요소에 적용합니다. 초깃값은 브라우저가 지정합니다.*/
-    text-decoration: initial; /*text-decoration CSS 단축 속성은 글씨의 장식(선) 색을 지정합니다*/
-                              /*링크 아래에 -----선을 없애줌*/
+    color:initial;
+    text-decoration: initial;
 }
 
-/* ul은 옆에 패딩과 마진이 남게되어 둘다 0으로 */
 ul{
-    list-style: none; /*ul로 만들면 왼쪽에 점이 있는게 그 점을 없애줌*/
-    padding: 0; /*감싸진 ul밖에 paddinng이랑 margin이 있었음(잘 찾아보기)*/
-    margin: 0;
-}
-
-ol{
-    list-style: none; /*ol은 만들면 옆에 숫자가 뜨는데 그걸 없애줌*/
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
-
-/* -------------------------------------------------------------------------------- */
-
-/* 보여지기 싫은 */
+/* ---------------------------------------------------- */
 .d-none{
-    display: none; 
-    /* !important 우선순위를 제일 앞에 둔다 */
-
+    display: none !important;
 }
-/* ------------------------------------------------------------------ */
 
+/* ------------------------------------ */
 .button,
 .icon,
 .img{
-    display: inline-block; /*전후 줄바꿈 없이 나란히 배치가되고 inline에서 불가능하던 높이 너비 margin padding속성 지정이 가능해짐*/
-    text-indent: 90px; /*옆으로 내어쓰기*/
-    overflow: hidden; /*컨텐츠 크기가 레이아웃에서 벗어나면 어떻게 할 것이지를 정해주는 속성(스크롤을 만들것이냐, 빠져나온부분을 없앨것이냐등)*/
+    display: inline-block;
+    text-indent: -999px;
+    overflow: hidden;
 }
 
 .img-notepubs{
-    background: url("../images/notepubs.png");
-    width: 180px;
+    background: url(../images/notepubs.png) no-repeat;
+    width:180px;
     height: 50px;
 }
 
 .img-namoolab{
-    background: url("../images/namoolab.png");
-    width: 180px;
+    background: url(../images/namoolab.png) no-repeat;
+    width:180px;
     height: 50px;
 }
 
@@ -61,20 +48,14 @@ ol{
     margin-right: auto;
     height: 100%;
     min-height:inherit;
-    opacity: 0.7;    
+    opacity: 0.7;
     /* height: inherit; */
-
-}
-
-#visual .float-content{
-    background:#313131 url("../images/customer/visual.png") no-repeat center;
-
 }
 
 #root{
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 250px 750px 1fr;
+    grid-template-columns: 1fr 205px 755px 1fr;
     grid-template-rows: 70px 171px 1fr 100px;
     grid-template-areas: 
     "header header header header"
@@ -84,46 +65,43 @@ ol{
 }
 
 #header{
-    background-color: white;
+    background-color: #ffffff;
     grid-area: header;
-}
-
-#header>.float-content{
-    position: relative;
+   
 }
 
 #visual{
     border-top:3px solid #8CBA34;
     background:#313131 url("../images/bg-visual.png") no-repeat center;
     grid-area: visual;
-    
 }
+
+    #visual .float-content{
+        background:#313131 url("../images/customer/visual.png") no-repeat center;
+    }
 
 #body{
-    border-top: 5px solid #8CBA34;
+    border-top:5px solid #8CBA34;
     margin-top: 1px;
     grid-area: body;
-
-    
 }
 
-#body .float-content{
-    display: grid;
-    grid-template-columns: 1fr 205px 755px 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: ". aside main .";  
-    /* 그리드 안쪽에 있는 바디에 또 한번 그리드를 채웠다 */
-    background:url("../images/bg-body.png") repeat-y center;
-}
+    #body .float-content{
+        display: grid;
+        grid-template-columns: 1fr 205px 755px 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". aside main .";
+
+        background:url("../images/bg-body.png") repeat-y center;
+    }
 
 #aside{
-    /* background-color: blue; */
     grid-area: aside;
+
     background:url("../images/bg-aside-title.png") no-repeat;
 }
 
 #main{
-    /* background-color: blueviolet; */
     
     grid-area: main;
 }
@@ -138,8 +116,14 @@ ol{
 } */
 
 @media screen and (max-width: 960px){
+    
+    .float-content{        
+        width:100%;
+    }
+    
     #root{
-        grid-template-columns: 1fr;
+        
+        grid-template-columns: 1fr;        
         grid-template-areas: 
         "header"
         "visual"
@@ -147,273 +131,228 @@ ol{
         "footer";
     }
 
-    #body{
-
-        grid-template-columns: 1fr;
-        
-        grid-template-areas: "main";  
-        
+    #body{        
+        grid-template-columns: 1fr;    
+        grid-template-areas: "main";
     }
-
-    .float-content{
-
-        width:100%;
-
-    
-    }
-
- 
 }
 
-.main-menu{
-    display: inline-block;
-    font-family: "맑은 고딕", "고딕", 'Franklin Gothic Medium', 'Arial Narrow', 'Arual', sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    color: #000000;
-    position: absolute;
-    top: 27px;
-    left: 200px;
+/* ------------------------------------------------------------------- */
+
+#header>.float-content{
+    position: relative;
 }
 
 .logo{
     margin: 0;
     display: inline-block;
-    position: absolute;  /*relative/fixed/sticky*/
-    left: 0;
-    top: 23px;
-    /* 기준점이 달라서 left나 top이 각각 달라진다 */
-    /* absolute->문서기준 좌상단  relative->원위치 fixed->화면기준 좌상단 */
-    /*그냥 left나 top을 줘도 위치가 고정되어있기때문에 움직이지않는다 그래서 position을 정해줘야 원점이 어디인지 정해지고 위치를 조정할 수 있다.*/
-    
-   
+
+    position: relative;
+    top:23px;
 }
 
-
-
-.main-menu>ul{
-    display: flex
-
-}
-
-.main-menu>ul>li{
-    padding-left: 24px;
-    background: url("../images/bg-main-menu-vsp.png")no-repeat 12px center;
-    /* li사이에 구분될수있게..... 12px로 가운데 */
-    
-   
-}
-
-/* .main-menu>ul>li.first{
-    padding-left: 0px;
-   background: none;
-
-} */
-
-.main-menu>ul>li:nth-child(1){
-    padding-left: 0px;
-    background: none;
-    /* 간단하게 몇번째를 선택할지를 고를 수 있다. */
-}
-
-.main-menu>ul>li>a:hover{
-    color: #e07a1a;
-    /* 링크에 마우스를 올렸을때 바뀌는 색 */
-}
-
-
-.member-menu{
+.main-menu{    
     display: inline-block;
+
+    font-family: "맑은 고딕", "고딕", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
 
     position: absolute;
-    right: 0px;  /**/
-    top: 21px;
+    left:200px;
+    top:27px;
 }
+    .main-menu>ul{
+        display: flex;
+    }
 
-.member-menu>ul{
-    display: flex
+        .main-menu>ul>li{
+            padding-left:24px;
+            background: url("../images/bg-main-menu-vsp.png") no-repeat 12px center;
+        }
 
-}
+        .main-menu>ul>li:first-child{
+            padding-left:0px;
+            background: none;
+        }
 
-.member-menu>ul>li{
-    padding-left: 24px;
-    background: url("../images/bg-member-menu-sp.png")no-repeat 9px center;
-  
-    font-family: "맑은 고딕";
-    /* font-style: "맑은 고딕"; */
-    font-weight: bold;
-    font-size: 10px;
-    
-   
-}
+        .main-menu>ul>li>a:hover{
+            color:rgb(247, 129, 34);
+        }
 
+        .member-menu{
+            display: inline-block;
 
-/* ---------------------------------고객센터메뉴 aside------------------------------------------ */
-#aside > h1{
- 
-    display: inline-block;
-    font-family: "맑은 고딕", 고딕, 'Franklin Gothic Medium', 'Arial Narrow', 'Arual', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #000000;
-    
-    
-
-}
-
-.aside-main-menu a{
-    font-family: "맑은 고딕", 고딕, 'Franklin Gothic Medium', 'Arial Narrow', 'Arual', sans-serif;
-	font-weight: bold;
-	color: #808080;
-    font-size: 11px;
-	padding-left: 26px;   
-}
-
-.aside-main-menu a:hover,
-.aside-main-menu a.corrent
-{
-    background: url("../images/icon-current.png") no-repeat 12px center;
-    
-
-}
-
-.aside-main-menu li{
-	/* height: 26px; */
-    line-height: 26px;  /*줄 간격(높이)을 정해줌*/
-    background: url("../images/bg-aside-menu-hsp.png") no-repeat center bottom;
-
-
-
-}
-
-
-
-.member-menu>ul>li:nth-child(1){
-    padding-left: 0px;
-    background: none;
-
-}
-
-.member-menu>ul>li>a:hover{
-    color: #979797;
-  
-}
-
-
-.breadcrumb>ol{
-    display: flex;
-}
-
-.breadcrumb>ol>li{
-    padding-left: 20px;
-    background: url("../images/icon-path.png")no-repeat 10px center;
-  
-  
-    font-weight: bold;
-    font-size: 10px;
-    
-   
-}
-
-.breadcrumb>ol>li:nth-child(1){
-
-    background: url("../images/iconHome.png")no-repeat 0px center;
-  
-   
-
-}
+            position: absolute;
+            right: 0px;
+            top:20px;
+        }
+        
+            .member-menu > ul{
+                display: flex;    
+            }
+            
+                .member-menu > ul > li{
+                    font-family: "맑은 고딕", "고딕", sans-serif;
+                    font-size:10px;
+                    font-weight: bold;
+                
+                    padding-left: 9px;
+                    background: url("../images/bg-member-menu-sp.png") no-repeat 5px;
+                }
+                
+                .member-menu > ul > li:first-child{
+                    padding-left: 0px;
+                    background: none;
+                }
 
 .lecture-search-form{
+
     display: inline-block;
+
     width: 308px;
     height: 25px;
-    border: 5px solid ;
-    border-color: #8CBA34;    
+    border: 5px solid #8CBA34;
+
     position: absolute;
-    top: 21px;
-    left: 468px;
-    
-    
+    left:468px;
+    top:21px;
 }
 
-
-.lecture-search-form fieldset{
-    display: flex;
-
-    border: 0;
-    padding: 0;
-    margin: 0;
-    
+.lecture-search-form form{
+    height: 100%;
 }
 
-.lecture-search-form fieldset label{
-    font-size: 11px;
-    font-weight: bold;
-    width: 55px;
+    .lecture-search-form fieldset{
+        display: flex;
 
+        border:0;
+        padding: 0;
+        margin: 0;
+    }
 
-    height: 25px;
-    line-height: 25px;
-    text-align: center;
- 
-}
+    .lecture-search-form fieldset label{
+        font-size: 11px;
+        font-weight: bold;
+        flex-basis: 55px;
 
+        line-height: 25px;
+        text-align: center;
+    }
 
-.lecture-search-form fieldset input[type=text]{
-    flex-grow: 1;
-    border: 0;
-    /* text-indent: 5px; */
-    padding-left: 5px;
-    font-size: 11px;
-    font-weight: bold;
-    color: blue;
-}
+    .lecture-search-form fieldset input[type=text]{
+        flex-grow: 1;
+        border:0;
+        /* text-indent: 5px; */
+        padding-left: 5px;
+        font-size: 11px;
+        font-weight: bold;
+        color: cornflowerblue;
+    }
 
-.lecture-search-form fieldset input[type=submit]{
-    /* flex-basis: 31px; */
-    width: 31px;
-    height: 25px;
-    background: url("../images/btn-zoom.png")no-repeat center;
-    
-    border: 0px ;
-    border-left: 1px solid #8CBA34;    
-}
-
-
+    .lecture-search-form fieldset input[type=submit]{
+        flex-basis:31px;        
+        background: url("../images/btn-zoom.png") no-repeat center;
+        
+        border:0;
+        border-left: 1px solid #8CBA34;
+    }
 
 
 .customer-menu{
-
     display: inline-block;
     position: absolute;
     right: 0px;
-    top: 40px;
+    top:40px;
 }
 
-.customer-menu>ul{
-    display: flex;
+    .customer-menu>ul{
+        display: flex;
+    }
+        .customer-menu .mypage-button{        
+            background: url("../images/txt-mypage.png") no-repeat center;
+            width: 72px;
+            height: 17px;        
+        }
+
+        .customer-menu .customer-button{
+            background: url("../images/txt-customer.png") no-repeat center;
+            width: 72px;
+            height: 17px;
+        }
+
+/* --------------------------------- */
+#aside > h1
+{
+    font-family:"맑은 고딕", 고딕, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color:#000;
+
+    margin-top: 43px;
 }
 
-    .customer-menu .mypage-buttonn {
-        background: url("../images/txt-mypage.png")no-repeat center;
-        
-        display: inline-block;
-        width: 72px;
-        height: 17px;
-        text-indent: -999px;
-        overflow: hidden;
+.aside-menu{
+    margin-top: 10px;
+}
 
-        /* width: 72px; text-indent: 50px; 둘다 블럭태그에만 적용이 가능한 속성이다 */
-    }
+.aside-menu > h1
+{
+    font-family:맑은 고딕, 고딕, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color:#000;
+    padding-left: 26px;
+    background: url("../images/icon-recommend.png") no-repeat left center;
+}
 
-    .customer-menu .customer-button{
-        background: url("../images/txt-customer.png")no-repeat center;
-        
-        display: inline-block;
-        width: 72px;
-        height: 17px;
-        text-indent: -999px;
-        overflow: hidden;
+/* ---------------------------------------------------------- */
+.main-aside-menu{
+    margin-top: 45px;
+}
 
-        /* width: 72px; text-indent: 50px; 둘다 블럭태그에만 적용이 가능한 속성이다 */
-    }
+.main-aside-menu > h1{
+    color:#ffffff;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 10px;
+    font-size:12px;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 1px#000000;
+    background:url(../images/bg-aside-sub-title.png) no-repeat 0px 0px;
+}
+
+.main-aside-menu li{
+    /* 배경이미지 : bg-aside-menu-hsp.png
+    높이 : 26px; */
+    height: 26px;    
+    background: url(../images/bg-aside-menu-hsp.png) no-repeat center bottom;
+
+}
+.main-aside-menu a{
+    /* 폰트 : 맑은 고딕
+    가중치 : bold
+    폰트크기 : 11px
+    색상 : #808080 */
+    font-family: "맑은 고딕", "고딕", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    color:#808080;
+
+    /* 왼쪽 패딩 간격 : 26px
+    배경이미지 : icon-current.png
+    텍스트꾸미기 : none */
+
+    padding-left: 24px;    
+}
+
+.main-aside-menu a:hover,
+.main-aside-menu a.current
+{
+    background: url("../images/icon-current.png") no-repeat 12px center;
+}
+
+.recommend-aside-menu {
+    
+}
