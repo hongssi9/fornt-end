@@ -3,12 +3,18 @@ html,body{
     margin:0;
 }
 
+html,body,h1,ul{
+    margin: 0;
+    padding: 0;
+}
+
 a{
     color:initial;
     text-decoration: initial;
 }
 
-ul{
+
+ul ,ol{
     list-style: none;
     padding: 0;
     margin: 0;
@@ -101,9 +107,22 @@ ul{
     background:url("../images/bg-aside-title.png") no-repeat;
 }
 
-#main{
-    
+#main{    
     grid-area: main;
+    padding: 45px 0px 50px 35px;
+}
+
+.title-style > h1{
+    font-family:"맑은 고딕", 고딕, sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    color:#646464;
+
+    padding: 25px;
+    background:url("../images/icon-main-title.png") no-repeat left center;
+
+ 
+
 }
 
 #footer{
@@ -355,4 +374,40 @@ ul{
 
 .recommend-aside-menu {
     
+}
+
+/* ------------------------------------------------------------------------------- */
+.breadcrumb{
+    font-family: "맑은 고딕";
+    font-weight: bold;
+    font-size: 10px;
+    color: #979797;
+    display: inline-block;
+}
+
+    .breadcrumb>ol{
+        display: flex;
+    }
+
+        .breadcrumb>ol>li{
+            padding-left: 10px;
+            background: url("../images/icon-path.png") no-repeat 0px center;
+        }
+
+        .breadcrumb>ol>li:first-child{
+            padding-left: 20px;
+            background: url("../images/icon-home.png") no-repeat 0px center;
+        }
+.notice-board{
+    border-top: 2px solid #8CBA34;
+}
+
+.notice-board tr{
+    height: 30px;
+    line-height: 30px;
+}
+
+.notice-board td{
+    border-bottom: 1px solid #e9e9e9;
+
 }
