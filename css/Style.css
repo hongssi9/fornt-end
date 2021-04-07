@@ -19,6 +19,12 @@ ul ,ol{
     padding: 0;
     margin: 0;
 }
+/* ------------------------------------------------------- */
+body{
+    font-family: "돋움", Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #979797;
+}
 
 /* ---------------------------------------------------- */
 .d-none{
@@ -400,6 +406,9 @@ ul ,ol{
         }
 .notice-board{
     border-top: 2px solid #8CBA34;
+    width: 100%; /*테이블은 넓이를 전부 갖고있지 않는다.*/
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
 .notice-board tr{
@@ -409,5 +418,25 @@ ul ,ol{
 
 .notice-board td{
     border-bottom: 1px solid #e9e9e9;
+    padding: 0;
+}
+.notice-board td.w-1{
+    width: 60px;
+}
+
+.notice-board td.w-2{
+    width: 100px;
+}
+
+
+
+
+
+
+/* .notice-board td :nth-child(1){
 
 }
+
+.notice-board td .???{
+
+} */
