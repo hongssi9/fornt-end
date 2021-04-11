@@ -32,7 +32,6 @@ a{
     grid-template-areas:
     ". header header ."
     ". main main ."
-    /* ". main main ." */
     ". aside-home aside-login ."
     /* ". . . ." */
     ;
@@ -139,6 +138,7 @@ body{
     grid-area: aside-home;
     background: skyblue;
     border: 0;
+    margin: 10px;
     padding: 0;
     /* display: flex; */
     /* justify-content: center; */
@@ -179,6 +179,8 @@ body{
     width: 300px; */
     border: 0;
     padding: 0;
+    margin: 10px;
+
 
     position: relative;
     bottom: 200px;
