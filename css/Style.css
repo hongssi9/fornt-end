@@ -20,14 +20,26 @@ ul ,ol{
     margin: 0;
 }
 /* ------------------------------------------------------- */
+
+:root{
+    --color-basic:#979797;
+    --color-string:#ff6a00;
+    --bg-color-basic:#fff;
+    --bg-color-light:#e9e9e9;
+    --bg-color-dark:#313131;
+}
 body{
     font-family: "돋움", Arial, Helvetica, sans-serif;
     font-size: 11px;
-    color: #979797;
+   
+
+    color:var(--color-basic)
 }
 
 a{
-    color: #979797;
+    /* color: #979797; */
+    color:var(--color-basic)
+
 }
 
 /* -------------------utils style--------------------------------- */
@@ -188,6 +200,10 @@ a{
 .page-status > div{
     text-align: right;
 }
+
+.page-status span{
+    color: var(--color-string); /*변수로 만들어서 가져온 예시*/
+    font-weight: bold;}
 
 #footer{
     background-color: #313131;

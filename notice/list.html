@@ -145,7 +145,7 @@
                         <section class="page-status">
                             <h1 class="d-none">현재 페이지 정보</h1>
                             <div>
-                                1 / 2 pages
+                                <span>1</span> / 2 pages
                             </div>
                         </section>
 
@@ -187,6 +187,53 @@
     </script> -->
 
     <script>
+
+function f1(){
+        //var x= 1; // var 변수를 선언하면 함수 지역변수로 만들어져서
+        var x = 1;
+        return function () {
+            return ++x;
+
+        };
+}
+
+        var f = f1();
+        console.log(f());
+        console.log(f());
+        console.log(f());
+
+        //f1(); //f1() 호출 x라는 변수가 없어짐.
+        //console.log(x);
+
+        // var x = 1;
+        // console.log(window.x);
+
+        // var result = add(3, 4);
+
+        // var add = function (x, y) {
+        //     return x + y;
+        // };
+        // var result = add(3, 4)
+        //console.log(result); //제일 많이 쓰이는...
+
+
+
+        // var add = new Function("x, y","return x+y;");
+        // console.log(add(3,4));
+
+        // var add = function(x,y){
+        //     return x+y;
+        //     console.log(add(3,4));
+        // }
+
+        // function add(x,y){
+        //     return x+y;
+
+
+        // }
+
+
+
         // var n1 = 3;
         // console.log(n1);
         // var n2 = new Number(3);
@@ -216,13 +263,14 @@
 
         // console.log(alert(a))
 
-       {
-           var a=1;
+    //    {
+    //        var a=1;
 
-           var a= 2;
-       } //자바스크립트에서 지역화 {} 는 적용되지 않는다. (유일한 함수 지역화만 가능)
-        alert(a);
-        
+    //        var a= 2;
+    //    } 
+    //     alert(a);
+       //자바스크립트에서 지역화 {} 는 적용되지 않는다. (유일한 함수 지역화만 가능)
+
 
         //JSON 문자열을 자바스크립트 객체로 변경하기
 
