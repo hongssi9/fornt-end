@@ -201,6 +201,44 @@ a{
     text-align: right;
 }
 
+.pager{
+    
+ 
+}
+
+.pager > ul{
+    display: flex;
+   
+  height: 15px;
+
+}
+
+.pager li{
+   border: 1px solid gray;
+   flex-basis: 15px;
+   line-height: 15px;
+   text-align: center;
+   
+   
+}
+
+.pager>:nth-child(2){
+    height: 15px;
+    width: 15px;
+    background: url("../images/btnPrev.png")no-repeat center ;
+
+
+}
+
+.pager>:nth-child(4){
+    height: 15px;
+    width: 15px;
+    background: url("../images/btnNext.png")no-repeat center ;
+
+
+
+}
+
 .page-status span{
     color: var(--color-string); /*변수로 만들어서 가져온 예시*/
     font-weight: bold;}

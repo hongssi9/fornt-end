@@ -102,6 +102,9 @@ body{
 }
 
 
+.main-text span{
+    color: gray;
+}
 
 .main-text {
     display: flex;
@@ -136,7 +139,6 @@ body{
 
 .aside-home{
     grid-area: aside-home;
-    background: skyblue;
     border: 0;
     margin: 10px;
     padding: 0;
@@ -146,6 +148,8 @@ body{
     /* padding-top: 25px; */
     /* height: 100px;
     width: 300px;   */
+    cursor:pointer;
+
 
     position: relative;
     bottom: 200px;
@@ -174,12 +178,14 @@ body{
 
 .aside-login{
     grid-area: aside-login;
-    background: thistle;
+    background: #64DB99;;
     /* height: 100px;
     width: 300px; */
     border: 0;
     padding: 0;
     margin: 10px;
+    cursor:pointer;
+
 
 
     position: relative;
@@ -274,3 +280,89 @@ body{
 
 
 }
+ 
+  #container{
+    width:715px;
+    height:230px;
+    margin:50px auto;
+    grid-area: main;
+  }
+  .button-1{
+    width:140px;
+    height:50px;
+    border:2px solid #34495e;
+    float:left;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+    box-sizing:border-box;
+    overflow:hidden;
+    margin:0 0 40px 0;
+  }
+  .button-1 a{
+    font-family:arial;
+    font-size:16px;
+    color:#34495e;
+    text-decoration:none;
+    line-height:50px;
+    transition:all .5s ease;
+    z-index:2;
+    position:relative;
+  }
+  .eff-1{
+    width:140px;
+    height:50px;
+    top:-2px;
+    right:-140px;
+    background:#34495e;
+    position:absolute;
+    transition:all .5s ease;
+    z-index:1;
+  }
+  .button-1:hover .eff-1{
+    right:0;
+  }
+  .button-1:hover a{
+    color:#fff;
+  }
+
+  .button-4{
+    width:140px;
+    height:50px;
+    border:2px solid #34495e;
+    float:left;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+    box-sizing:border-box;
+    overflow:hidden;
+    margin:0 0 40px 50px;
+  }
+  .button-4 a{
+    font-family:arial;
+    font-size:16px;
+    color:#34495e;
+    text-decoration:none;
+    line-height:50px;
+    transition:all .5s ease;
+    z-index:2;
+    position:relative;
+  }
+  .eff-4{
+    width:140px;
+    height:50px;
+    left:-140px;
+    background:#34495e;
+    position:absolute;
+    transition:all .5s ease;
+    z-index:1;
+  }
+  .button-4:hover .eff-4{
+    left:0;
+  }
+  .button-4:hover a{
+    color:#fff;
+  }
+
+
+ 
