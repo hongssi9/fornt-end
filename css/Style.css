@@ -33,12 +33,13 @@ body{
     font-size: 11px;
    
 
-    color:var(--color-basic)
+    color:var(--color-basic);
 }
 
 a{
     /* color: #979797; */
-    color:var(--color-basic)
+    color:var(--color-basic);
+    
 
 }
 
@@ -55,6 +56,22 @@ a{
 
 .text-align-left{
     text-align: left !important;
+}
+
+.text-align-right{
+    text-align: right !important;
+}
+
+.mt-2{
+    margin-top: 5px !important; 
+}
+
+.mt-3{
+    margin-top: 10px !important; 
+}
+
+.mt-4{
+    margin-top: 15px !important; 
 }
 
 
@@ -202,7 +219,8 @@ a{
 }
 
 .pager{
-    
+    display: flex;
+    justify-content: center;
  
 }
 
@@ -210,17 +228,33 @@ a{
     display: flex;
    
   height: 15px;
+  
+    margin:0 4px;
+  /* margin-left: 4px;
+  margin-right: 4px; */
 
 }
 
 .pager li{
-   border: 1px solid gray;
-   flex-basis: 15px;
+   
    line-height: 15px;
    text-align: center;
+   width: 15px;
    
    
 }
+
+/* .pager li:nth-child(1){
+    color: var(--color-string);
+} */
+
+.pager li a{
+    color: var(--color-string);
+    
+}
+
+
+
 
 .pager>:nth-child(2){
     height: 15px;

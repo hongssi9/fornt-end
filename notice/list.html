@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <script>
+        function printSum() {
+            var x = prompt('x:');
+            var y = prompt('y:');
+            x = parseInt(x);
+            y = parseInt(y);
+            alert(x + y);
+        }
+        //아래 html 중간에 스크립트를 쓸 수 있지만 보기가 너무 힘들어서 head에 함수를 만들어서 사용하면 편하다
+    </script>
 </head>
 
 <body>
@@ -68,7 +78,13 @@
         <div id="body">
             <div class="float-content">
                 <aside id="aside">
-                    <h1>고객센터</h1>
+                    <h1 id="asideTitle" onclick="printSum()">고객센터</h1> <!--이벤트 발생(고객센터를 누르면)-->
+                    <script>
+                         //var html = "<span>안녕dddd하세요</span>";
+                         //window.document.write(html); //텍스트를 창에 넣고싶을때(띄울때 말고)
+                         //asideTitle.innerHTML = html; //=이면 바꾸기 += 본래 텍스트에서 추가
+                         //중간에도 스크립트 사용 가능함
+                    </script>
                     <nav class="main-aside-menu">
                         <h1>고객센터메뉴</h1>
                         <ul>
@@ -102,7 +118,7 @@
                         </section>
 
                         <section>
-                            <h1>공지사항 목록</h1>
+                            <h1 class="d-none">공지사항 목록</h1>
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -142,18 +158,18 @@
                             </table>
                         </section>
 
-                        <section class="page-status">
+                        <section class="page-status mt-3">
                             <h1 class="d-none">현재 페이지 정보</h1>
                             <div>
                                 <span>1</span> / 2 pages
                             </div>
                         </section>
 
-                        <nav class="pager">
+                        <nav class="pager mt-3">
                             <h1 class="d-none">페이저</h1>
                             <div class="button">이전</div>
                             <ul>
-                                <li>1</li>
+                                <li><a href=""> 1</a></li>
                                 <li>2</li>
                                 <li>3</li>
                                 <li>4</li>
@@ -175,26 +191,28 @@
             </div>
         </footer>
 
-        
+
     </div>
 
-    <!-- <script>
-        var nums = new Array();
-        nums[0] = 2;
-        nums[1] = 3;
-        console.log(nums[0]);
-        nums[100] = 5;
-        console.log(nums[100]);
-        console.log(nums);
-    </script> -->
 
     <script>
 
-        var x = prompt("x:");
-        var y = prompt("y:");
-        x = parseInt(x);
-        y = parseInt(y);
-        alert(x+y);
+
+
+        //var html = "<span>안녕dddd하세요</span>";
+        //window.document.write(html); //텍스트를 창에 넣고싶을때(띄울때 말고)
+        //asideTitle.innerHTML = html; //=이면 바꾸기 += 본래 텍스트에서 추가
+
+
+        // var result = window.confirm("정말 ") //ex.삭제나 탈퇴같은 버튼 누를때 물어보기
+        //                                     //alert는 확인버튼 뿐이지만 confirm은 확인,취소버튼이 있음
+        // console.log(result);
+
+        // var x = prompt("x:");
+        // var y = prompt("y:");
+        // x = parseInt(x);
+        // y = parseInt(y);
+        // alert(x+y); //얼러트 차이 띄우기
 
 
 
@@ -221,6 +239,8 @@
 //         console.log(f());
 //         console.log(f());
 //         console.log(f());
+
+
 
         //f1(); //f1() 호출 x라는 변수가 없어짐.
         //console.log(x);
