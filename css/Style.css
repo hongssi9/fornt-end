@@ -199,7 +199,15 @@ a{
 #main{    
     grid-area: main;
     padding: 45px 0px 50px 35px;
+
+    position: relative;
 }
+/* 
+.breadcrumb{
+    position: absolute;
+    right: 0px;
+    top: 70px;
+} */
 
 .title-style > h1{
     font-family:"맑은 고딕", 고딕, sans-serif;
@@ -528,6 +536,8 @@ a{
     
 }
 
+
+
 /* ------------------------------------------------------------------------------- */
 .breadcrumb{
     font-family: "맑은 고딕";
@@ -535,6 +545,9 @@ a{
     font-size: 10px;
     color: #979797;
     display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 70px;
 }
 
     .breadcrumb>ol{
@@ -551,6 +564,9 @@ a{
             background: url("../images/icon-home.png") no-repeat 0px center;
         }
 
+        .search-form{
+            margin-top: 26px;
+        }
 
 
 
