@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
 
     stop.onclick = function () {
         console.log("stop");
-        clearInterval(move); //변수를 만들어서 넣어주는생각을 못함
+        clearInterval(move); //변수를 만들어서 넣어주는생각을 못함 앞으로 변수 함수 활용 연습 할것
     }
 });
 
