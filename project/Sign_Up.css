@@ -7,14 +7,30 @@ html {
 body {
     margin: 0;
     height: 100%;
-    background: #f5f6f7;
-    font-family: Dotum,'돋움',Helvetica,sans-serif;
+    background: /*#E6FFE6;*//*#d7fdf7;*/ #ebf6ff;
+    font-family: Dotum,'돋움',Helvetica,sans-serif !important;
+}
+
+a{
+    text-decoration: initial;
+    padding: 50px;
+}
+
+#header > a{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: none;
+
+    color: rgb(92, 148, 100);
+    
+    
 }
 
 
-#logo {   /*로고 이미지 크기조정*/
-    width: 300px;
-    height: 100px;
+.logo {   /*로고 이미지 크기조정*/
+    /* width: 300px;
+    height: 100px; */
+    
     /* height: 40%; */
     /* width: 240px;
     height: 44px;
