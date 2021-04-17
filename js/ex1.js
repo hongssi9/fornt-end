@@ -1,15 +1,25 @@
-window.addEventListener("load", function(){
-    var section = document.querySelector("#ex6");
+// window.addEventListener("load", function(){
+//     var section = document.querySelector("#ex6");
 
-    var container_ = section.querySelector(".container");
-    var boxes = section.querySelectorAll(".box"); //All은 목록으로
-    var button = section.querySelector("input[value='click']");
+//     var container_ = section.querySelector(".container");
+//     var boxes = section.querySelectorAll(".box"); //All은 목록으로
+//     var button = section.querySelector("input[value='click']");
     
- 
-});
+//     button.onclick = function(){
+        
+//         var count = 0;
+//         window.setInterval(function(){
+//             console.log("text");
+//             count++;
+//             boxes[0]. = count + "100px";
+//         },17);
+//     }
+// }
 
 
 
+
+// addEventListener 여러개의 이벤트 핸들러를 등록할 수 있다.
 window.addEventListener("load", function(){
     var section = document.querySelector("#ex5");
 
@@ -19,9 +29,9 @@ window.addEventListener("load", function(){
     btn.onclick = function(){
       
         window.setInterval(function(){  //setInterval 누르면 1초마다 계속 실행...
-            var a = parseInt(span_.innerText);
-            a--;
-            span_.innerText = a;
+            var count = parseInt(span_.innerText); //1.증감식을 어디서 가져올지..
+            count--; //2.1씩 --
+            span_.innerText = count; //3. 증감식을 다시 뿌려줘야 감소가 된다.
             console.log("test");
         }, 1000);   //윈도우 기능중 시간을 설정할 수 있는...
     }
