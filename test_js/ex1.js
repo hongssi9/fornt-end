@@ -8,8 +8,8 @@ window.addEventListener("load", function () {
 
     var count = 0;
     var move;
-    
-     button.onclick = function () {
+
+    button.onclick = function () {
 
         var test = "test";
         move = window.setInterval(function () { //함수가 아닌 변수로 정의를??
@@ -26,11 +26,6 @@ window.addEventListener("load", function () {
         clearInterval(move); //변수를 만들어서 넣어주는생각을 못함 앞으로 변수 함수 활용 연습 할것
     }
 });
-
-
-
-
-
 
 
 // addEventListener 여러개의 이벤트 핸들러를 등록할 수 있다.
