@@ -1,4 +1,46 @@
 window.addEventListener("load", function () {
+    var section = document.querySelector("#ex7");
+
+    var container_ = section.querySelector(".container");
+
+    var add = section.querySelector("input[value='추가']");
+    var del = section.querySelector("input[value='삭제']");
+    var clone = section.querySelector("input[value='복제']");
+    // var boxes = document.querySelectorAll(".box");
+
+    add.onclick = function (){
+        console.log("추가");
+        // 1. 엘리먼트 객체를 생성하기
+        // var img = document.createElement("img");
+
+        var div = document.createElement("div"); //div태그를 만들었다
+
+        // 2. 엘리먼트 객체의 속성 설정하기
+        // img.src = "../images/1.jpg";
+        div.style.background = "blue";
+        div.style.width = "100px";
+        div.style.height = "100px";
+        div.style.borderRadius = "50px";
+
+
+        // 3.엘리먼트 객체를 문서에 추가하기
+        // container_.appendChild(img); //부모 노드에 자식 노드를 추가한다..?
+        container_.appendChild(div);
+    };
+
+    del.onclick = function (){
+        console.log("삭제");
+    };
+
+    clone.onclick = function (){
+        console.log("복제");
+    };
+
+});
+
+
+
+window.addEventListener("load", function () {
     var section = document.querySelector("#ex6");
 
     var container_ = section.querySelector(".container");
@@ -6,26 +48,70 @@ window.addEventListener("load", function () {
     var button = section.querySelector("input[value='click']");
     var stop = section.querySelector("input[value='stop']");
 
-    var count = 0;
-    var move;
+    var tid;
 
     button.onclick = function () {
+        var box = boxes[0]
+        let boxStyle = window.getComputedStyle(box);
 
-        var test = "test";
-        move = window.setInterval(function () { //함수가 아닌 변수로 정의를??
-            count += 1;
-            if (count <= 400) {
-                boxes[0].style.left = count + "px";
-                console.log(test);
-            }
-        }, 10); //깃 오류
-    };
+        //자동으로 "12px" -> "12" -> 12 로 변환시켜준다.
 
-    stop.onclick = function () {
-        console.log("stop");
-        clearInterval(move); //변수를 만들어서 넣어주는생각을 못함 앞으로 변수 함수 활용 연습 할것
+        var left = parseInt(boxStyle.getPropertyValue("left"));
+
+        tid = window.setInterval(function(){
+            if(left >= 400)
+            clearInterval(tid);
+
+            left++;
+            box.style.left = left+"px";
+        },17);    
+
+        // var tid = window.setInterval(function () {
+        //     if (left <= 400) {
+        //         boxes[0].style.left = left + "px";
+        //         left++;
+        //     }
+        //     else{
+        //         clearInterval(tid);
+        //     }
+        //     console.log(left);
+
+        // }, 17);
+    }
+
+    stop.onclick = function(){
+        clearInterval(tid);
     }
 });
+
+// window.addEventListener("load", function () {
+//     var section = document.querySelector("#ex6");
+
+//     var container_ = section.querySelector(".container");
+//     var boxes = section.querySelectorAll(".box"); //All은 목록으로
+//     var button = section.querySelector("input[value='click']");
+//     var stop = section.querySelector("input[value='stop']");
+
+//     var px_c = 0;
+//     var move;
+
+//     button.onclick = function () {
+
+//         var test = "test";
+//         move = window.setInterval(function () { //변수 대입??
+//             px_c += 1;
+//             if (px_c <= 400) {
+//                 boxes[0].style.left = px_c + "px";
+//                 console.log(test);
+//             }
+//         }, 10); //깃 오류
+//     };
+
+//     stop.onclick = function () {
+//         console.log("stop");
+//         clearInterval(move); //변수를 만들어서 넣어주는생각을 못함 앞으로 변수 함수 활용 연습 할것
+//     }
+// });
 
 
 // addEventListener 여러개의 이벤트 핸들러를 등록할 수 있다.
