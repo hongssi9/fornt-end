@@ -1,0 +1,96 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    font-family: Dotum,'돋움',Helvetica,sans-serif;    
+
+}
+
+#header{
+    text-align: center;
+    padding: 20px 20px;
+    font-family: none;
+}
+
+#header a{
+    text-decoration: initial;
+    font-size: 20px;
+    font-weight: bold;
+
+    color: rgb(92, 148, 100);
+}
+
+.line{
+    border: 1px solid #8cba34;
+}
+
+#wrapper{
+    height: 100%;
+    position: relative;
+}
+
+#main{
+    position: absolute; /*부모가 relative니까 그 절대좌표가 부모기준에서 위치를 맞춘다*/
+    /* justify-content: center; flex일때 먹힘 */
+    left: 50%;
+    /* transform: translate(-50%); */
+    width: 460px;
+}
+
+.box{
+    display: block;
+    margin-top: 10px; /*박스위에 조금씩 띄우려고 test*/
+    /* width: 100%; */
+    /* height: 51px; */
+    /* position: relative; */
+    /* box-sizing: border-box; */
+    /* background: #fff; */
+    border-radius: 8px;
+    border: solid 1px #dadada;
+    padding: 10px 14px; /*텍스트 위에 감싸진 box크기를 늘려 보기좋게*/
+
+}
+
+#txt{
+    display: block;
+    border: none;
+    width: 100%;
+    height: 29px;
+    /* border: none; */
+    font-size: 15px;
+    /* font-weight: bold; */
+
+}
+
+input:focus {  /*텍스트가 선택되면 주변에 생기는 테두리를 없애줌*/
+    outline: none;
+}
+
+
+h3 { /*휴대전화, 이메일 선택자만 위에 텍스트 띄웠음*/
+    margin: 19px 0 8px;
+    font-size: 14px;
+    font-weight: 700;  /*폰트 굵기*/
+}
+
+
+.btn{
+    padding: 21px 0 17px;
+    width: 100%;
+    background-color: rgb(146, 211, 93);
+    border: none;
+    border-radius: 8px;
+    /* margin: 10px; 마진을 주니까 옆으로 삐져나옴 */ 
+}
+.btn_area { /*버튼위에 하나 감싸숴 마진을 주니 안삐져나옴*/
+    margin: 30px 0 91px;
+    
+}
+
+/*--------------------------생년월일-----------------------------*/
+
+/* .date{
+    display: table;
+} */
+.box-yy{
+  
+}

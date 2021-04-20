@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../test/copy.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <a href="메인화면 링크~" title="메인화면">BookCaine</a>
+    </header>
+
+    <div class="line">
+
+    </div>
+
+    <div id="wrapper">
+
+        <div id="main">
+        <div> <!--div는 디폴트가 block이니까 한줄로 맞춰짐 block=한줄을 다 갖는다.-->
+            <span class="box">
+                <input type="text" id="txt" class="ID_txt" placeholder="아이디" maxlength="15">         
+            </span>
+        </div>
+
+            <span class="box">
+                <input type="text" id="txt" class="PW_txt" placeholder="비밀번호" maxlength="20">
+            </span>
+
+            <span class="box">
+                <input type="text" id="txt" class="PWR_txt" placeholder="비밀번호 재확인" maxlength="20">
+            </span>
+
+            <span class="box">
+                <input type="text" id="txt" class="NAME_txt" placeholder="이름" maxlength="10">
+            </span>
+
+<!------------------------------------------생년월일----------------------------------------------------->
+            <div class="date">
+            <span class="box box-yy">
+                <input type="text" id="txt" class="yy" placeholder="년(4자)" maxlength="4">
+            </span>
+
+            <span class="box">
+                <select class="mm">
+                    <option>월</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+            </span>
+
+            <span class="box">
+                <input type="text" id="txt" class="dd" placeholder="일" maxlength="2">
+            </span>
+
+        <div class="gender">
+            <h3>성별</h3>
+            <input type="checkbox" checked>남자
+            <input type="checkbox">여자
+        </div>
+
+    </div>
+<!----------------------------------------------------------------------------------------------------------->
+
+
+    <h3>휴대전화(선택)</h3>
+        <span class="box">
+            <input type="text" id="txt" placeholder="선택입력" maxlength="15">
+        </span>
+
+        
+        <h3>본인확인 이메일(선택)</h3>
+        <span class="box">
+            <input type="text" id="txt" placeholder="선택입력" maxlength="30">
+        </span>
+
+        <!-- <input type="button" class="btn" value="회원가입 완료"> -->
+        <div class="btn_area">
+            <button type="button" onclick="location.href='PupUp.html' " class="btn">
+                <span>회원가입 완료</span>
+            </button>
+        </div>
+
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

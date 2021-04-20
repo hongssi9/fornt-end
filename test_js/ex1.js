@@ -17,12 +17,12 @@ window.addEventListener("load", function () {
         // 1. 엘리먼트 객체를 생성하기
         // var img = document.createElement("img");
         // var txt = document.createTextNode("1");
-        var div = document.createElement("div"); //div태그를 만들었다
+        var div = document.createElement("div"); //태그 네임을 지정해준다.
        
 
         // 2. 엘리먼트 객체의 속성 설정하기
         // img.src = "../images/1.jpg";
-        div.style.background = text_color.value;
+        div.style.background = text_color.value;  //색상 텍스트에 값으로 스타일을 지정해준다.
         div.style.width = "100px";
         div.style.height = "100px";
         div.style.borderRadius = "50px";
@@ -33,13 +33,16 @@ window.addEventListener("load", function () {
         // div.appendChild(txt);
         // div.append("1");
         // div.innerText = "1";
-        div.append(text_id.value);
+        div.append(text_id.value);   //div에다 text_id 값을 넣어준다.
+                                     //이해하기 어렵지만 다시한번.... 엘리먼트 객체 div를 위에서 만들어 줬으니까 그 객체 안에다가 적을? 값이나 문자열을 넣을 수 있다.
+                                     //그니까 div안에 들어갈 내용?을 정하는 거
 
 
         // 3.엘리먼트 객체를 문서에 추가하기
         // container_.appendChild(img); //부모 노드에 자식 노드를 추가한다..?
         // container_.appendChild(div);
-        container_.append(div);
+        container_.append(div); //div class="container" 에다가 만든 div를 넣어주는거다!
+                                //div안에 들어갈 내용을 위에서 정했으면 그걸 장소에 넣어준다.
         
     };
 
