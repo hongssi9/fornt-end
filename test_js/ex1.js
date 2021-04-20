@@ -6,34 +6,62 @@ window.addEventListener("load", function () {
     var add = section.querySelector("input[value='추가']");
     var del = section.querySelector("input[value='삭제']");
     var clone = section.querySelector("input[value='복제']");
+    var text_id = section.querySelector(".id-input");
+    var text_color = section.querySelector(".color-input");
+    var change = section.querySelector(".btn-change");
+
     // var boxes = document.querySelectorAll(".box");
 
     add.onclick = function (){
         console.log("추가");
         // 1. 엘리먼트 객체를 생성하기
         // var img = document.createElement("img");
-
+        // var txt = document.createTextNode("1");
         var div = document.createElement("div"); //div태그를 만들었다
+       
 
         // 2. 엘리먼트 객체의 속성 설정하기
         // img.src = "../images/1.jpg";
-        div.style.background = "blue";
+        div.style.background = text_color.value;
         div.style.width = "100px";
         div.style.height = "100px";
         div.style.borderRadius = "50px";
+        div.style.textAlign = "center";
+        div.style.color = "blue";
+        div.style.lineHeight = "100px";
+
+        // div.appendChild(txt);
+        // div.append("1");
+        // div.innerText = "1";
+        div.append(text_id.value);
 
 
         // 3.엘리먼트 객체를 문서에 추가하기
         // container_.appendChild(img); //부모 노드에 자식 노드를 추가한다..?
-        container_.appendChild(div);
+        // container_.appendChild(div);
+        container_.append(div);
+        
     };
 
     del.onclick = function (){
         console.log("삭제");
+        var div = container_.querySelector("div:first-child");
+        div.remove();
+        // container_.removeChild(div);
+
+        
     };
 
     clone.onclick = function (){
         console.log("복제");
+        var div = container_.querySelector("div:first-child");
+        var clone = div.cloneNode();
+        container_.append(clone);
+    };
+
+    change.onclick = function (){
+        console.log("바꾸기");
+        
     };
 
 });
