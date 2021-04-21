@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
         console.log(selected);
         console.log(i); //3에서 계속 멈춰있음
 
-        //let -> 참조변수가 아닌 값 변수로 만들어준다.
+        //let -> 참조변수가 아닌 값 변수로 만들어준다.....
     }
 }
 
