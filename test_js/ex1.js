@@ -1,4 +1,41 @@
 window.addEventListener("load", function () {
+    var section = document.querySelector("#ex8");
+
+    var container_ = section.querySelector(".container");
+
+    var add = section.querySelector(".btn-add");
+    var del = section.querySelector(".btn-del");
+    var clone = section.querySelector(".btn-clone");
+    var change = section.querySelector(".btn-change");
+
+    var selected = null;
+
+    var boxes = container_.querySelectorAll(".box");
+
+    //Closure : 아웃터 영역의 자원이 해제될 수 있게 하는 키를 가지는 함수
+    for(let i=0; i<boxes.length; i++){
+    boxes[i].onclick = function(){ //로직이 똑같은것이 3개가 만들어짐
+        selected = boxes[i];
+        console.log(selected);
+        console.log(i); //3에서 계속 멈춰있음
+
+        //let -> 참조변수가 아닌 값 변수로 만들어준다.
+    }
+}
+
+    del.onclick = function (){
+         console.log("test");
+         if(selected != null)
+         selected.remove();
+    }
+
+});
+
+
+
+
+
+window.addEventListener("load", function () {
     var section = document.querySelector("#ex7");
 
     var container_ = section.querySelector(".container");
@@ -64,6 +101,15 @@ window.addEventListener("load", function () {
 
     change.onclick = function (){
         console.log("바꾸기");
+        var ex = container_.querySelectorAll("div");
+        var e1 = ex[0];
+        var e2 = ex[1];
+        // var e1 = container_.querySelector("div:first-child");
+        // var e2 = container_.querySelector("div:last-child");
+        
+        var old =  container_.replaceChild(e1, e2);
+        // container_.insertBefore(old, e1); 옛날방법
+        e1.insertAdjacentElement('beforebegin',old);
         
     };
 

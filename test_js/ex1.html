@@ -10,6 +10,45 @@
 </head>
 
 <body>
+    <section id="ex8">
+        <style>
+            #ex8 .container{
+                width:500px;
+                height: 300px;
+                background-color: gray;
+                position: relative;
+                display: flex;
+            }
+            #ex8 .box{
+                width:100px;
+                height: 100px;
+                background-color: blue;
+                color:#fff;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                line-height: 100px;
+                border-radius: 50px;
+               
+            }
+        </style>
+        <h1>이벤트 객체 target 속성</h1>
+        <h2>앞의 예제에서 삭제를 한다? 선택한 원을 삭제하시오</h2>
+        <div>
+            <label>식별자</label><input class="id-input" type="text">
+            <label>색상</label><input class="color-input" type="text">
+            <input class="btn btn-add" type="button" value="추가">
+            <input class="btn btn-del" type="button" value="삭제">
+            <input class="btn btn-clone" type="button" value="복제">
+            <input class="btn btn-change" type="button" value="바꾸기">
+        </div>        
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+    </section>
+    <hr>
 
     <section id = "ex7">
         <h1>노드 조작하기</h1>
