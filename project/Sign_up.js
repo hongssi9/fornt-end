@@ -15,7 +15,7 @@ window.addEventListener("load", function(){
 
         div.append("야아아아ㅏㅇ아아");
 
-        ID_txt(ID_txt.value).append(div);
+      
         console.log("id")
     }
 

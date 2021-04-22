@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
     var section = document.querySelector("#ex8");
 
-    var container_ = section.querySelector(".container");
+    var container = section.querySelector(".container");
 
     var add = section.querySelector(".btn-add");
     var del = section.querySelector(".btn-del");
@@ -10,18 +10,42 @@ window.addEventListener("load", function () {
 
     var selected = null;
 
-    var boxes = container_.querySelectorAll(".box");
+        container.onclick = function(e){  //버블링 공부하기 //이벤트객체 정보를 e란 함수에다 넣어준다.
+            //박스가 선택되지 않았다면 실행을 끝내주는 조건문
+            if(e.target.classList != "box")
+            return;
+
+            // console.log(e.target);  //target 클릭되는놈을 알 수 있다.
+            // selected = e.target;
+
+            if(selected != null && selected != e.target)
+            selected.classList.remove("selected");
+            
+            //선택된 박스 -> toggle하면 눌렀다 취소했다 할 수 있다.
+            selected = e.target;
+            selected.classList.add("selected");
+
+            // selected.style.border="2px solid red"; //복잡한 코드이다
+        }
+
+    // var boxes = container.querySelectorAll(".box");
+
+    // boxes[0].onclick = function(){
+    //     console.log("box");
+    // }
 
     //Closure : 아웃터 영역의 자원이 해제될 수 있게 하는 키를 가지는 함수
-    for(let i=0; i<boxes.length; i++){
-    boxes[i].onclick = function(){ //로직이 똑같은것이 3개가 만들어짐
-        selected = boxes[i];
-        console.log(selected);
-        console.log(i); //3에서 계속 멈춰있음
+//     for(let i=0; i<boxes.length; i++){
+//     boxes[i].onclick = function(){ //로직이 똑같은것이 3개가 만들어짐
+//         selected = boxes[i];
+//         console.log(selected);
+//         console.log(i); //3에서 계속 멈춰있음
 
-        //let -> 참조변수가 아닌 값 변수로 만들어준다.....
-    }
-}
+//         //let -> 참조변수가 아닌 값 변수로 만들어준다.....
+//     }
+// }
+
+    
 
     del.onclick = function (){
          console.log("test");

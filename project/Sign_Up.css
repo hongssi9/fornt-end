@@ -48,7 +48,6 @@ body{
 .box{ /*텍스트 위에 span(공백 만들기)*/
     display: block;
     margin-top: 18px; /*박스위에 조금씩 띄우려고 test*/
-    /* width: 100%; */
     /* height: 51px; */
     /* position: relative; */
     /* box-sizing: border-box; */
@@ -106,7 +105,7 @@ h3 { /*휴대전화, 이메일 선택자만 위에 텍스트 띄웠음*/
 
 /*--------------------------생년월일-----------------------------*/
 
-.date{ /*display : table -> table-cell 써도 보여지는건 똑같음*/
+.date{ /*display : table -> table-cell 써도 보여지는건 똑같음 flex도 가능*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;

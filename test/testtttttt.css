@@ -79,6 +79,8 @@ input[type=submit]:hover,input[type=boutton]:hover {
     background-color: #45a049;
 }
 
+
+/* ------------------------------------------------------------------- */
 #wrap_gender{
     border-radius: 4px;
     border: 1px solid #ccc;
@@ -86,7 +88,7 @@ input[type=submit]:hover,input[type=boutton]:hover {
 }
 
 .gender{
-    /* display: block; */
+    display: block;
     height: 100%; width: 50%;
     border-right: 1px solid #ccc;
 }
@@ -108,7 +110,7 @@ input[type=radio]{
    display: none;
 }
 
-.gender_act{
+.gender_act{   /*누르면...*/
     display: inline-block;
     height: 100%; width: 50%;
     background-color: #45a049;
@@ -123,4 +125,25 @@ input[type=radio]{
     font-size: 0.8em;
     color: #fff;
 }
-
+/* ------------------------------------------------ */
+.box-radio-input input[type="radio"]{
+    display:none;
+  }
+  
+  .box-radio-input input[type="radio"] + span{
+    display:inline-block;
+    background:none;
+    border:1px solid #dfdfdf;  
+    padding:0px 10px;
+    text-align:center;
+    height:35px;
+    line-height:33px;
+    font-weight:500;
+    cursor:pointer;
+  }
+  
+  .box-radio-input input[type="radio"]:checked + span{
+    border:1px solid #23a3a7;
+    background:#23a3a7;
+    color:#fff;
+  }

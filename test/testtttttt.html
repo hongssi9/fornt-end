@@ -3,16 +3,18 @@
 <head>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="../test/testtttttt.js"></script>
   <link href="../test/testtttttt.css" type="text/css" rel="stylesheet">
   <script>
-       // alert('hello!')  
+   // alert('hello!')  
   </script>
 </head>
 
 <body>
   <div class="container">
     <div class="header">
-      <div class="logo">북카인</div>
+      <div class="logo"></div>
     </div>
     <div class="main">
       <h4>회원가입</h4>
@@ -40,17 +42,23 @@
               <span id="MsgName" class="none">유효성체크</span>
             </div>
 
+<!-- -------------------------------------------------------------------------------------- -->
             <div id="wrap_gender">
               <span id="wrap_man" class="gender">
                 <input type="radio" id="man" name="gender" onclick="ck_gender()"> <label for="man"> 남자 </label>
               </span>
-              <span id="wrap_woman" class="gender no_line">
-                <input type="radio" id="woman" name="gender" onclick="ck_gender()"> <label for="woman"
-                  onclick="ck_gender()"> 여자 </label>
-              </span>
-            </div>
 
-            
+              <span id="wrap_woman" class="gender no_line">
+                <input type="radio" id="woman" name="gender" onclick="ck_gender()"> <label for="woman"> 여자 </label>
+              </span>
+
+            </div>
+<!-- ----------------------------------------------------------------------------------------- -->
+            <label class="box-radio-input"><input type="radio" name="cp_item" value="옵션1"
+                checked="checked"><span>옵션1</span></label>
+            <label class="box-radio-input"><input type="radio" name="cp_item" value="옵션2"><span>옵션2</span></label>
+<!-- ----------------------------------------------------------------------------------------- -->
+
             <span id="MsgGender" class="none">유효성체크</span>
             <div>
               <select id="country" name="country">
