@@ -10,23 +10,23 @@ window.addEventListener("load", function () {
 
     var selected = null;
 
-        container.onclick = function(e){  //버블링 공부하기 //이벤트객체 정보를 e란 함수에다 넣어준다.
-            //박스가 선택되지 않았다면 실행을 끝내주는 조건문
-            if(e.target.classList != "box")
+    container.onclick = function (e) {  //버블링 공부하기 //이벤트객체 정보를 e란 함수에다 넣어준다.
+        //박스가 선택되지 않았다면 실행을 끝내주는 조건문
+        if (!e.target.classList.contains("box"))
             return;
 
-            // console.log(e.target);  //target 클릭되는놈을 알 수 있다.
-            // selected = e.target;
+        // console.log(e.target);  //target 클릭되는놈을 알 수 있다.
+        // selected = e.target;
 
-            if(selected != null && selected != e.target)
+        if (selected != null && selected != e.target)
             selected.classList.remove("selected");
-            
-            //선택된 박스 -> toggle하면 눌렀다 취소했다 할 수 있다.
-            selected = e.target;
-            selected.classList.add("selected");
 
-            // selected.style.border="2px solid red"; //복잡한 코드이다
-        }
+        //선택된 박스 -> toggle하면 눌렀다 취소했다 할 수 있다.
+        selected = e.target;
+        selected.classList.toggle("selected");
+
+        // selected.style.border="2px solid red"; //복잡한 코드이다
+    };
 
     // var boxes = container.querySelectorAll(".box");
 
@@ -35,22 +35,22 @@ window.addEventListener("load", function () {
     // }
 
     //Closure : 아웃터 영역의 자원이 해제될 수 있게 하는 키를 가지는 함수
-//     for(let i=0; i<boxes.length; i++){
-//     boxes[i].onclick = function(){ //로직이 똑같은것이 3개가 만들어짐
-//         selected = boxes[i];
-//         console.log(selected);
-//         console.log(i); //3에서 계속 멈춰있음
+    //     for(let i=0; i<boxes.length; i++){
+    //     boxes[i].onclick = function(){ //로직이 똑같은것이 3개가 만들어짐
+    //         selected = boxes[i];
+    //         console.log(selected);
+    //         console.log(i); //3에서 계속 멈춰있음
 
-//         //let -> 참조변수가 아닌 값 변수로 만들어준다.....
-//     }
-// }
+    //         //let -> 참조변수가 아닌 값 변수로 만들어준다.....
+    //     }
+    // }
 
-    
 
-    del.onclick = function (){
-         console.log("test");
-         if(selected != null)
-         selected.remove();
+
+    del.onclick = function () {
+        console.log("test");
+        if (selected != null)
+            selected.remove();
     }
 
 });
@@ -73,13 +73,13 @@ window.addEventListener("load", function () {
 
     // var boxes = document.querySelectorAll(".box");
 
-    add.onclick = function (){
+    add.onclick = function () {
         console.log("추가");
         // 1. 엘리먼트 객체를 생성하기
         // var img = document.createElement("img");
         // var txt = document.createTextNode("1");
         var div = document.createElement("div"); //태그 네임을 지정해준다.
-       
+
 
         // 2. 엘리먼트 객체의 속성 설정하기
         // img.src = "../images/1.jpg";
@@ -95,46 +95,46 @@ window.addEventListener("load", function () {
         // div.append("1");
         // div.innerText = "1";
         div.append(text_id.value);   //div에다 text_id 값을 넣어준다.
-                                     //이해하기 어렵지만 다시한번.... 엘리먼트 객체 div를 위에서 만들어 줬으니까 그 객체 안에다가 적을? 값이나 문자열을 넣을 수 있다.
-                                     //그니까 div안에 들어갈 내용?을 정하는 거
+        //이해하기 어렵지만 다시한번.... 엘리먼트 객체 div를 위에서 만들어 줬으니까 그 객체 안에다가 적을? 값이나 문자열을 넣을 수 있다.
+        //그니까 div안에 들어갈 내용?을 정하는 거
 
 
         // 3.엘리먼트 객체를 문서에 추가하기
         // container_.appendChild(img); //부모 노드에 자식 노드를 추가한다..?
         // container_.appendChild(div);
         container_.append(div); //div class="container" 에다가 만든 div를 넣어주는거다!
-                                //div안에 들어갈 내용을 위에서 정했으면 그걸 장소에 넣어준다.
-        
+        //div안에 들어갈 내용을 위에서 정했으면 그걸 장소에 넣어준다.
+
     };
 
-    del.onclick = function (){
+    del.onclick = function () {
         console.log("삭제");
         var div = container_.querySelector("div:first-child");
         div.remove();
         // container_.removeChild(div);
 
-        
+
     };
 
-    clone.onclick = function (){
+    clone.onclick = function () {
         console.log("복제");
         var div = container_.querySelector("div:first-child");
         var clone = div.cloneNode();
         container_.append(clone);
     };
 
-    change.onclick = function (){
+    change.onclick = function () {
         console.log("바꾸기");
         var ex = container_.querySelectorAll("div");
         var e1 = ex[0];
         var e2 = ex[1];
         // var e1 = container_.querySelector("div:first-child");
         // var e2 = container_.querySelector("div:last-child");
-        
-        var old =  container_.replaceChild(e1, e2);
+
+        var old = container_.replaceChild(e1, e2);
         // container_.insertBefore(old, e1); 옛날방법
-        e1.insertAdjacentElement('beforebegin',old);
-        
+        e1.insertAdjacentElement('beforebegin', old);
+
     };
 
 });
@@ -159,13 +159,13 @@ window.addEventListener("load", function () {
 
         var left = parseInt(boxStyle.getPropertyValue("left"));
 
-        tid = window.setInterval(function(){
-            if(left >= 400)
-            clearInterval(tid);
+        tid = window.setInterval(function () {
+            if (left >= 400)
+                clearInterval(tid);
 
             left++;
-            box.style.left = left+"px";
-        },17);    
+            box.style.left = left + "px";
+        }, 17);
 
         // var tid = window.setInterval(function () {
         //     if (left <= 400) {
@@ -180,7 +180,7 @@ window.addEventListener("load", function () {
         // }, 17);
     }
 
-    stop.onclick = function(){
+    stop.onclick = function () {
         clearInterval(tid);
     }
 });

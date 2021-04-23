@@ -110,7 +110,7 @@ input[type=radio]{
    display: none;
 }
 
-.gender_act{   /*누르면...*/
+.gender_act{  
     display: inline-block;
     height: 100%; width: 50%;
     background-color: #45a049;
@@ -124,7 +124,7 @@ input[type=radio]{
     text-align: center;
     font-size: 0.8em;
     color: #fff;
-}
+} 
 /* ------------------------------------------------ */
 .box-radio-input input[type="radio"]{
     display:none;

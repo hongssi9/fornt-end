@@ -99,3 +99,26 @@ a{
 
 
 /* ------------------------------------------------------------ */
+#header{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding: 0px 10px;
+    
+    
+}
+
+#header .logo{
+    margin-right: auto; /*컨텐츠가 계속 들어가도 다 오른쪽으로 갈수있게..*/
+}
+
+#header .header-menu{
+    /* margin-left: auto; 여백 공간에서만 가능...확인해볼것 */
+}
+
+/* margin-left: auto; 마진을 이용한 정렬방식 */
+#header .header-menu ul{
+    display: flex;
+    
+}
+

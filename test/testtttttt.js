@@ -87,13 +87,3 @@ if(woman.checked){
 
 
 }
-
-
-/*    
-if(man.checked == false && woman.checked == false){
-    MsgGender.style.display="block";
-    MsgGender.className='error'
-    MsgGender.innerHTML="필수 정보입니다."        wrap_gender.style.borderColor="red";
-    return false;
-}
-*/
