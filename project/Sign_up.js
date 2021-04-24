@@ -1,5 +1,5 @@
 window.addEventListener("load", function(){
-    var section = document.querySelector("#gender-box");
+    var section = document.querySelector("#gender_box");
     var man = section.querySelector("#man");
     var woman = section.querySelector("#woman");
     // var PW_txt = section.querySelector(".PW_txt");
@@ -9,15 +9,21 @@ window.addEventListener("load", function(){
     var selected = null;
     
 
-    man.onclick = function(){
+    // man.onclick = function(){
       
-        console.log("man")
-    }
+    //     console.log("man")
+    // }
 
-    woman.onclick = function(){
+    // woman.onclick = function(){
       
-        console.log("woman")
-    }
+    //     console.log("woman")
+    // }
+
+    section.onclick = function (e) {
+       console.log("test");
+
+
+    };
 
 
 

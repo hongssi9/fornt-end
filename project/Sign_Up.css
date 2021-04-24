@@ -148,7 +148,7 @@ h3 { /*휴대전화, 이메일 선택자만 위에 텍스트 띄웠음*/
 
 /* -------------------------성별--------------------------------------- */
 
-#gender-box{
+#gender_box{
     border: 1px solid #dadada;
     border-radius: 8px;
     display: flex;

@@ -71,13 +71,22 @@
             </div>
 
             <h3>성별</h3>
-            <div id="gender-box">
-                <span class="box-m gender ">
-                    <input type="radio" id="man" name="gender" > <label for="man"> 남자 </label>
+            <div id="gender_box">
+                <style>
+                   #gender-box .gender .box-change {
+                        background-color: rgb(146, 211, 93);
+                        border-radius: 3px;
+                        color: white;
+                        font-weight: bold;
+                    }
+                </style>
+                <span class="box-m gender">
+                    <input type="radio" id="man" name="gender"> <label for="man"> 남자 </label>
                 </span>
                 <span class="box-w gender">
                     <input type="radio" id="woman" name="gender"> <label for="woman"> 여자 </label>
-                </span>   <!--라디오 버튼에서, 텍스트를 눌렀을때 같이 선택되게 하려면  id속성과 label for속성을 같게 설정한다. -->
+                </span>
+                <!--라디오 버튼에서, 텍스트를 눌렀을때 같이 선택되게 하려면  id속성과 label for속성을 같게 설정한다. -->
             </div>
 
             <!-- <div id="wrap_gender">
