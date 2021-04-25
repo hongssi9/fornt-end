@@ -1,35 +1,23 @@
-window.addEventListener("load", function(){
-    var section = document.querySelector("#gender_box");
-    var man = section.querySelector("#man");
-    var woman = section.querySelector("#woman");
-    // var PW_txt = section.querySelector(".PW_txt");
-    // var PWR_txt = section.querySelector(".PWR_txt");
-    // var NAME_txt = section.querySelector(".NAME_txt");
- 
-    var selected = null;
+
+
+function box_change(){
+    var man = document.querySelector("#man")
+    var woman = document.querySelector("#woman")
     
-
-    // man.onclick = function(){
-      
-    //     console.log("man")
-    // }
-
-    // woman.onclick = function(){
-      
-    //     console.log("woman")
-    // }
-
-    section.onclick = function (e) {
-       console.log("test");
-
-
-    };
-
-
-
-
-
     
-
-});
+    
+    if(man.checked){
+        document.getElementById("box-m").className='box_change';
+        document.getElementById("box-w").className='gender';
+        console.log("tst1")
+    }
+    
+    if(woman.checked){
+        document.getElementById("box-w").className='box_change';
+        document.getElementById("box-m").className='gender';
+        console.log("tst")
+    }
+    
+    
+    }
 

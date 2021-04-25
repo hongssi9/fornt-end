@@ -23,7 +23,9 @@ window.addEventListener("load", function () {
 
         //선택된 박스 -> toggle하면 눌렀다 취소했다 할 수 있다.
         selected = e.target;
-        selected.classList.toggle("selected");
+        selected.classList.toggle("selected1"); //클래스 생성
+        
+        console.log(e.target)
 
         // selected.style.border="2px solid red"; //복잡한 코드이다
     };
