@@ -10,33 +10,81 @@
 </head>
 
 <body>
+    <section id="ex10">
+        <style>
+            #ex8 .product{
+                box-shadow: 2px 3px 9px hsl(0, 0%, 47%);
+                padding:10px;
+            }
+
+            #ex8 .item{
+                height: 30px;
+            }
+        </style>
+        <h1>상품목록관리 : 노드 순회하기</h1>
+        <div class="product">
+            <div class="item">
+                <span>상품명1</span>
+                <input type="text" value="0">                
+                <button class="up">위</button>
+                <button class="down">아래</button>
+                <button class="current">선택</button>
+            </div>
+            <div class="item">
+                <span>상품명2</span>
+                <input type="text" value="0">                
+                <button class="up">위</button>
+                <button class="down">아래</button>
+                <button class="current">선택</button>
+            </div>
+            <div class="item">
+                <span>상품명3</span>
+                <input type="text" value="0">                
+                <button class="up">위</button>
+                <button class="down">아래</button>
+                <button class="current">선택</button>
+            </div>
+            <div class="item">
+                <span>상품명4</span>
+                <input type="text" value="0">                
+                <button class="up">위</button>
+                <button class="down">아래</button>
+                <button class="current">선택</button>
+            </div>
+            
+        </div>
+    </section>
+    <hr>
+
+
     <section id="ex9">
         <style>
-            .d-none{
+            .d-none {
                 display: none;
             }
-            #ex9 .item>div:first-child{
-                border:1px solid #e9e9e9;
+
+            #ex9 .item>div:first-child {
+                border: 1px solid #e9e9e9;
                 padding: 5px 10px;
                 font-weight: bold;
             }
 
-            #ex9 .item>div:last-child{
+            #ex9 .item>div:last-child {
                 min-height: 100px;
             }
         </style>
         <h1>아코디언예제 : 노드 순회하기</h1>
         <div class="accordion">
             <div class="item">
-                <div>title1</div>
-                <div class="">content1</div>
+                <div class="title">title1</div>
+                <div class="d-none">content1</div>
             </div>
             <div class="item">
-                <div>title2</div>
+                <div class="title">title2</div>
                 <div class="d-none">content2</div>
             </div>
             <div class="item">
-                <div>title3</div>
+                <div class="title">title3</div>
                 <div class="d-none">content3</div>
             </div>
         </div>
@@ -47,27 +95,28 @@
 
     <section id="ex8">
         <style>
-            #ex8 .container{
-                width:500px;
+            #ex8 .container {
+                width: 500px;
                 height: 300px;
                 background-color: gray;
                 position: relative;
                 display: flex;
             }
-            #ex8 .box{
-                width:100px;
+
+            #ex8 .box {
+                width: 100px;
                 height: 100px;
                 background-color: blue;
-                color:#fff;
+                color: #fff;
                 font-size: 30px;
                 font-weight: bold;
                 text-align: center;
                 line-height: 100px;
                 border-radius: 50px;
-               
+
             }
 
-            #ex8 .box.selected{
+            #ex8 .box.selected {
                 border: 2px solid red;
             }
         </style>
@@ -80,7 +129,7 @@
             <input class="btn btn-del" type="button" value="삭제">
             <input class="btn btn-clone" type="button" value="복제">
             <input class="btn btn-change" type="button" value="바꾸기">
-        </div>        
+        </div>
         <div class="container">
             <div class="box">1</div>
             <div class="box">2</div>
@@ -89,7 +138,7 @@
     </section>
     <hr>
 
-    <section id = "ex7">
+    <section id="ex7">
         <h1>노드 조작하기</h1>
         <div>
             <label>식별자</label> <input class="id-input" type="text">
@@ -108,14 +157,14 @@
 
     <section id="ex6">
         <style>
-            #ex6 .container{
+            #ex6 .container {
                 width: 500px;
                 height: 300px;
                 background-color: gray;
                 position: relative;
             }
 
-            #ex6 .box{
+            #ex6 .box {
                 width: 100px;
                 height: 100px;
                 background-color: blue;
@@ -125,20 +174,20 @@
                 text-align: center;
                 line-height: 100px;
                 border-radius: 50px;
-                position: absolute; /*앱솔루트를 줘야 lefr top..쓸 수 있음*/
+                position: absolute;
+                /*앱솔루트를 줘야 lefr top..쓸 수 있음*/
                 left: 0px;
                 top: 0px;
-                
+
             }
 
-            #ex6 .box1{
+            #ex6 .box1 {
                 left: 70px;
             }
 
-            #ex6 .box2{
+            #ex6 .box2 {
                 background-color: purple;
             }
-
         </style>
         <h1>css 속성 다루기</h1>
         <div>
@@ -155,19 +204,20 @@
 
     <section id="ex5">
         <style>
-            #ex5 .span{
+            #ex5 .span {
                 color: red;
                 font-weight: bold;
             }
 
-            #ex5 .btn{
+            #ex5 .btn {
                 border: 1px solid gray;
                 border-radius: 5px;
                 padding: 5px 10px;
                 cursor: pointer;
                 transition: 500ms;
             }
-            #ex5 .btn:hover{
+
+            #ex5 .btn:hover {
                 background-color: purple;
                 color: #fff;
             }
@@ -176,7 +226,7 @@
         <div>
             <label>남은시간</label>
             <span class="span">60</span>
-            <span class="btn" >카운트다운</span>
+            <span class="btn">카운트다운</span>
         </div>
     </section>
 
@@ -186,7 +236,7 @@
         <h1>chiledNodees를 이용한 노드 선택</h1>
         <div class="box">
             <input />
-            <input /> 
+            <input />
         </div>
     </section>
 
@@ -194,7 +244,8 @@
         <h1>Selectors API Level1</h1>
         <div>
             <div>
-                <input type="text" name="text-x" value="0">+<input type="text" class="text-y" value="0">=<input type=text class="text-sum"><br>
+                <input type="text" name="text-x" value="0">+<input type="text" class="text-y" value="0">=<input
+                    type=text class="text-sum"><br>
                 <input type="submit" class="submit-btn" value="덧셈">
             </div>
         </div>
@@ -204,12 +255,15 @@
         <h1>계산기</h1>
         <div>
             <div>
-                <input type="text" class="text-x" value="0">+<input type="text" class="text-y" value="0">=<input type=text class="text-sum"><br>
-                <input type="submit" class="submit-btn" value="덧셈"><!--<span class="span-sum">0</span>--> <!--span에 결과값 나오기-->
+                <input type="text" class="text-x" value="0">+<input type="text" class="text-y" value="0">=<input
+                    type=text class="text-sum"><br>
+                <input type="submit" class="submit-btn" value="덧셈">
+                <!--<span class="span-sum">0</span>-->
+                <!--span에 결과값 나오기-->
             </div>
         </div>
     </section>
-<hr>
+    <hr>
     <section id="ex1">
         <h1>이벤트 핸들러 발생</h1>
         <div>

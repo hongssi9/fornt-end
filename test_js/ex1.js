@@ -1,7 +1,61 @@
+window.addEventListener("load", function(){
+    var section = document.querySelector("#ex10");
+
+    var product = section.querySelector(".product");
+
+    product.onclick = function(e){
+        var item = e.target;
+        if(!item.classList.contains("up") &&
+        !item.classList.contains("down") &&
+        !item.classList.contains("current"))
+            return;
+
+        if(item.classList.contains("up")){
+            var input = item.parentNode.querySelector("input");
+            input.value = parseInt(input.value)+1;
+        }
+        else if(item.classList.contains("down")){
+            var input = item.parentElement.querySelector("input");
+            input.value = parseInt(input.value)-1;
+        }
+        else if(item.classList.contains("current")){
+            item.parentElement.style.border="2px dotted #000";
+        }
+    }
+});
+
+
+
+
+
+window.addEventListener("load", function () {
+    var section = document.querySelector("#ex9");
+
+    var accordion = section.querySelector(".accordion");
+
+    var selected = null;
+    accordion.onclick = function(e){
+        console.log("test");
+        //1. title이 아니면 return
+        if (!e.target.classList.contains("title"))
+        return;
+
+        //2. target 의 동생의 d-none을 빼자
+        e.target.nextElementSibling.classList.toggle("d-none"); //nextsibling:
+                                            //toggle방식 숙지
+
+        
+    }
+});
+
+
+
+
 window.addEventListener("load", function () {
     var section = document.querySelector("#ex8");
 
     var container = section.querySelector(".container");
+
 
     var add = section.querySelector(".btn-add");
     var del = section.querySelector(".btn-del");
@@ -23,7 +77,7 @@ window.addEventListener("load", function () {
 
         //선택된 박스 -> toggle하면 눌렀다 취소했다 할 수 있다.
         selected = e.target;
-        selected.classList.toggle("selected1"); //클래스 생성
+        selected.classList.toggle("selected"); //클래스 생성
         
         console.log(e.target)
 
