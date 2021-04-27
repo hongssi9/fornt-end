@@ -10,15 +10,40 @@
 </head>
 
 <body>
+    <section id="ex11">
+        <style>
+            #ex11 .upload-box{
+                width:500px;
+                height: 300px;
+                border:1px solid gray;
+                box-shadow: 2px 3px 9px hsl(0, 0%, 47%);
+                padding:10px;
+            }
+        </style>
+        <h1>파일업로드 : DND & Trigger</h1>
+        <div class="upload-box">
+            <button class="btn-sel">파일선택</button>        
+            <input class="btn-file d-none" type="file">
+        </div>
+    </section>
+    <hr>
+
+
+
+
     <section id="ex10">
         <style>
-            #ex8 .product{
+            #ex10 .product{
                 box-shadow: 2px 3px 9px hsl(0, 0%, 47%);
                 padding:10px;
             }
 
-            #ex8 .item{
+            #ex10 .item{
                 height: 30px;
+            }
+
+            #ex10 .item.current{
+                border: 2px dotted black;
             }
         </style>
         <h1>상품목록관리 : 노드 순회하기</h1>
@@ -178,7 +203,6 @@
                 /*앱솔루트를 줘야 lefr top..쓸 수 있음*/
                 left: 0px;
                 top: 0px;
-
             }
 
             #ex6 .box1 {

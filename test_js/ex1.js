@@ -1,25 +1,71 @@
 window.addEventListener("load", function(){
+    var section = document.querySelector("#ex11");
+
+    var uploadBox = section.querySelector(".upload-box");
+    var selButton = section.querySelector(".btn-sel");
+    var fileButton = section.querySelector(".btn-file");
+    
+    uploadBox.ondragenter = function(e){
+        console.log("enter");
+        e.preventDefault();
+    }
+
+    uploadBox.ondragover = function(e){ //드래그하면 계속 올라감
+        console.log("over");
+        e.preventDefault();
+    }
+
+
+    uploadBox.ondragleave = function(e){
+        console.log("leave");
+        e.preventDefault();
+        // e.files[0];
+    }
+
+    uploadBox.ondrop = function(e){
+        console.log("drop");
+        e.preventDefault();
+    }
+
+
+
+    selButton.onclick = function(e){
+        var event = new MouseEvent("click",{ //바꿔치기~
+            'view' : window,
+            'bubbles' : true,
+            'cancelable' : true
+        });
+
+        fileButton.dispatchEvent(event);
+    }
+});
+
+
+
+
+window.addEventListener("load", function(){
     var section = document.querySelector("#ex10");
 
     var product = section.querySelector(".product");
 
-    product.onclick = function(e){
-        var item = e.target;
-        if(!item.classList.contains("up") &&
-        !item.classList.contains("down") &&
-        !item.classList.contains("current"))
+    product.onclick = function(e){ //target과 item차이
+        var target = e.target;
+        if(!target.classList.contains("up") &&
+        !target.classList.contains("down") &&
+        !target.classList.contains("current"))
             return;
 
-        if(item.classList.contains("up")){
-            var input = item.parentNode.querySelector("input");
+        if(target.classList.contains("up")){
+            var input = target.parentNode.querySelector("input");
             input.value = parseInt(input.value)+1;
         }
-        else if(item.classList.contains("down")){
-            var input = item.parentElement.querySelector("input");
+        else if(target.classList.contains("down")){
+            var input = target.parentElement.querySelector("input");
             input.value = parseInt(input.value)-1;
         }
-        else if(item.classList.contains("current")){
-            item.parentElement.style.border="2px dotted #000";
+        else if(target.classList.contains("current")){
+            // item.parentElement.style.border="2px dotted #000";
+            target.parentElement.classList.toggle
         }
     }
 });
