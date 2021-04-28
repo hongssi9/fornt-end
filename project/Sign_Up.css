@@ -60,7 +60,7 @@ body{
 
 }
 
-#txt{ /*type = text*/
+.txt{ /*type = text*/
     /* display: block; */
     border: none;
     width: 100%;
