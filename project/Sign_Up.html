@@ -23,24 +23,33 @@
     <div id="wrapper">
 
         <div id="main">
-            <div>
+            <div class="test1">
                 <span class="box">
                     <input type="text" id="txt" class="ID_txt" value="" placeholder="아이디" maxlength="15">
                 </span>
+                <span class="hide d-none">12</span>
             </div>
 
-            <span class="box">
-                <input type="password" id="txt" class="PW_txt" placeholder="비밀번호" maxlength="20">
-            </span>
+            <div>
+                <span class="box">
+                    <input type="password" id="txt" class="PW_txt" placeholder="비밀번호" maxlength="20">
+                </span>
+            </div>
+            <span class="hide">1</span>
 
-            <span class="box">
-                <input type="password" id="txt" class="PWR_txt" placeholder="비밀번호 재확인" maxlength="20">
-            </span>
+            <div>
+                <span class="box">
+                    <input type="password" id="txt" class="PWR_txt" placeholder="비밀번호 재확인" maxlength="20">
+                </span>
+                <span class="hide"></span>
+            </div>
 
-            <span class="box">
-                <input type="text" id="txt" class="NAME_txt" placeholder="이름" maxlength="10">
-            </span>
-
+            <div>
+                <span class="box">
+                    <input type="text" id="txt" class="NAME_txt" placeholder="이름" maxlength="10">
+                </span>
+                <span class="hide"></span>
+            </div>
             <!------------------------------------------생년월일----------------------------------------------------->
             <div class="date">
                 <span class="box box-yy">
@@ -72,8 +81,8 @@
 
             <h3>성별</h3>
             <div id="gender_box">
-        
-                <span id="box-m" class="box_change">
+
+                <span id="box-m" class="gender">
                     <input type="radio" id="man" name="gender" onclick="box_change()"> <label for="man"> 남자 </label>
                 </span>
                 <span id="box-w" class="gender">

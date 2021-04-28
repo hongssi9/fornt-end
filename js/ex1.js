@@ -1,41 +1,73 @@
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
     var section = document.querySelector("#ex11");
 
     var uploadBox = section.querySelector(".upload-box");
     var selButton = section.querySelector(".btn-sel");
     var fileButton = section.querySelector(".btn-file");
-    
-    uploadBox.ondragenter = function(e){
+
+    uploadBox.ondragenter = function (e) {
         console.log("enter");
         e.preventDefault();
     }
 
-    uploadBox.ondragover = function(e){ //드래그하면 계속 올라감
-        console.log("over");
+    uploadBox.ondragover = function (e) { //드래그하면 계속 올라감
+        // console.log("over");
         e.preventDefault();
+
+        var valid = e.dataTransfer.types.indexOf("Files") >= 0; //indexOf:
+        console.log(valid);
+
+        if (!valid) //파일형식일때만 초록 아니면 빨강
+            uploadBox.style.backgroundColor = "red";
+        else
+            uploadBox.style.backgroundColor = "green";
+
     }
 
 
-    uploadBox.ondragleave = function(e){
+    uploadBox.ondragleave = function (e) {
+        uploadBox.style.backgroundColor = "white";
         console.log("leave");
         e.preventDefault();
-        // e.files[0];
     }
 
-    uploadBox.ondrop = function(e){
-        console.log("drop");
+    uploadBox.ondrop = function (e) {
+        uploadBox.style.backgroundColor = "white";
         e.preventDefault();
+        console.log("drop");
+        // e.files[0];
+
+        console.log(e.dataTransfer.files[0].size); //파일용량이 무엇인지 확인하기...ondrop에서!
+
+        for (var attr in e.dataTransfer.files[0]) //뭐가들었는지 확인해보기~
+            console.log(attr);                    //for in문을 쓰면 파일 속성명을 확인할 수 있다
+
+        console.log(e.dataTransfer.files[0].name); //파일명이 뭔지 확인하기~
+
+
+
+        fileButton.oninput = function(e){ //input방식이 빠르다?
+            // for(var k in fileButton.files[0])
+            //     console.log(k); //이벤트 관련된 속성 확인하기
+            // console.log("file button inp...");
+
+            console.log(fileButton.files[0]); //결론 파일 정보를 전송하는 방법(통째로!!)
+        };
+
+        // for (var k in [10, 2, 30]) //for in문 예제
+        //     console.log(k);
     }
 
 
 
-    selButton.onclick = function(e){
-        var event = new MouseEvent("click",{ //바꿔치기~
-            'view' : window,
-            'bubbles' : true,
-            'cancelable' : true
+    selButton.onclick = function (e) {
+        var event = new MouseEvent("click", { //바꿔치기~
+            'view': window,
+            'bubbles': true,
+            'cancelable': true
         });
 
+        
         fileButton.dispatchEvent(event);
     }
 });
@@ -43,27 +75,27 @@ window.addEventListener("load", function(){
 
 
 
-window.addEventListener("load", function(){
+window.addEventListener("load", function () {
     var section = document.querySelector("#ex10");
 
     var product = section.querySelector(".product");
 
-    product.onclick = function(e){ //target과 item차이
+    product.onclick = function (e) { //target과 item차이
         var target = e.target;
-        if(!target.classList.contains("up") &&
-        !target.classList.contains("down") &&
-        !target.classList.contains("current"))
+        if (!target.classList.contains("up") &&
+            !target.classList.contains("down") &&
+            !target.classList.contains("current"))
             return;
 
-        if(target.classList.contains("up")){
+        if (target.classList.contains("up")) {
             var input = target.parentNode.querySelector("input");
-            input.value = parseInt(input.value)+1;
+            input.value = parseInt(input.value) + 1;
         }
-        else if(target.classList.contains("down")){
+        else if (target.classList.contains("down")) {
             var input = target.parentElement.querySelector("input");
-            input.value = parseInt(input.value)-1;
+            input.value = parseInt(input.value) - 1;
         }
-        else if(target.classList.contains("current")){
+        else if (target.classList.contains("current")) {
             // item.parentElement.style.border="2px dotted #000";
             target.parentElement.classList.toggle
         }
@@ -80,17 +112,17 @@ window.addEventListener("load", function () {
     var accordion = section.querySelector(".accordion");
 
     var selected = null;
-    accordion.onclick = function(e){
+    accordion.onclick = function (e) {
         console.log("test");
         //1. title이 아니면 return
         if (!e.target.classList.contains("title"))
-        return;
+            return;
 
         //2. target 의 동생의 d-none을 빼자
         e.target.nextElementSibling.classList.toggle("d-none"); //nextsibling:
-                                            //toggle방식 숙지
+        //toggle방식 숙지
 
-        
+
     }
 });
 
@@ -124,7 +156,7 @@ window.addEventListener("load", function () {
         //선택된 박스 -> toggle하면 눌렀다 취소했다 할 수 있다.
         selected = e.target;
         selected.classList.toggle("selected"); //클래스 생성
-        
+
         console.log(e.target)
 
         // selected.style.border="2px solid red"; //복잡한 코드이다

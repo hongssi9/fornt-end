@@ -29,7 +29,6 @@ body{
     border-top: 2px solid #8cba34;   
 }
 
-
 #wrapper{
     position: relative;
     height: 100%;
@@ -42,12 +41,20 @@ body{
     justify-content: center;
     margin-top: 30px;
     /* width: 500px; */
-    height: 300px;
+    height: 200px;
     
  
 }
 
-.content{
+.main-text span{
+    color: gray;
+}
+
+.name-text{
+    text-align: center;
+}
+
+#main{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -56,25 +63,24 @@ body{
 
 .btn-wrapper{
     margin: 30px 0 30px;
+    display: flex;
 
 }
 
-
-
-.Sign_Go{
+.Main_Go{
     width: 100%;
     cursor: pointer;
-    padding: 16px 0;
-    margin-bottom: 15px;
     border: none;
     background-color: rgba(104, 166, 247, 0.863);
     color: white;
     font-size: 15px;
     border-radius: 8px;
+    padding: 16px;
+    margin: 10px;
     
 }
 
-.Sign_Go:hover{
+.Main_Go:hover{
     background-color: rgba(60, 138, 240, 0.863);
 }
 
@@ -83,20 +89,45 @@ body{
     cursor: pointer;
     background-color: white;
     border: none;
-    padding: 16px 0;
     font-size: 15px;
-    border-radius: 8px;
+    border-radius: 8px; 
+    padding: 16px;
+    margin: 10px;
     
 }
 
 @media screen and (max-width: 500px) {
-    .content {
+    #main {
         position: absolute;
         left: 50%;
         transform: translate(-50%);
         width: 100%;
     }
 
-}
-    
+    /* .main-text{
+        font-size: 0.8em;
+    } */
 
+    .Main_Go{
+        width: 100%;
+        cursor: pointer;
+        border: none;
+        background-color: rgba(104, 166, 247, 0.863);
+        color: white;
+        font-size: 15px;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 10px;
+        
+    }
+    
+    .Login_go{
+       display: none;
+        
+    }
+
+    .main-text{
+        text-align: center;
+        font-size: 0.8em;
+    }
+}
