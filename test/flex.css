@@ -1,13 +1,18 @@
+html, body{
+    height: 100%;
+}
+
 #container{
     background-color: grey;
-    width:  aouto;  
-    height: 100px;
+    /* width:  aouto;   */
+    height: 100%;
     /* 방 전체를 할당하는 백그라운드 크기를 정해준다 */
 
     display: flex; 
+    flex-direction: column;
     /* display: flex;를 쓰게되면 한 문자만을 쓴다 (주석 풀었다 사용했다 이해해보기) */
     
-    flex-direction: row;
+    /* flex-direction: row; */
     /* flex-direction:  */
     /* column : 세로 */
     /* row-reverse -> 가로 역방향*/
@@ -29,7 +34,7 @@
 
 #container>div.box2{
     background-color: orange;
-    flex-basis: 300px;
+    /* flex-basis: 300px; */
     /* 박스의 크기를 지정해준다 */
     /* 그니까 컨테이너가 박스 크기보다 작아지면 box2는 자기몸을 희생해서 줄어드는거  */
 
@@ -57,4 +62,13 @@
     flex-shrink: 3;
     /* box5는 5개 공간중 3만큼 줄어든다 */
     /* box5가 더 많이 줄어든다. */
+}
+
+
+@media screen and (max-width: 500px) {
+    #container{
+        flex-direction: row;
+    }
+
+ 
 }

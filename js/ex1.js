@@ -1,4 +1,26 @@
 window.addEventListener("load", function () {
+    var section = document.querySelector("#ex12")
+
+    var requestButton = section.querySelector(".btn-request");
+    requestButton.onclick = function(e){
+        var request = new window.XMLHttpRequest();
+        //request.open("GET","ex1.txt",false); //비동기식
+        request.open("GET","http://localhost:8080/api/notice/list",false);
+        request.send(null);
+        //cross request !!
+
+        console.log(request.responseText);
+        // console.log("hello"); //출력이 같이 된다면...비동기
+
+    }
+
+
+});
+
+
+
+// -----------------------------------------------------------------
+window.addEventListener("load", function () {
     var section = document.querySelector("#ex11");
 
     var uploadBox = section.querySelector(".upload-box");

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" type="text/css" rel="stylesheet">
     <script src="list.js"></script>
-    <script src="Util.js"></script> <!--자바스크립트 두개를 붙이면 하나로 합쳐지듯 쓸 수 있다.-->
+    <script src="Util.js"></script>
+    <!--자바스크립트 두개를 붙이면 하나로 합쳐지듯 쓸 수 있다.-->
     <title>Document</title>
 </head>
+
 <body>
     <header id="header">
         <h1 class="logo"><a href=""><img src="../images/logo-sm.png"></a></h1>
@@ -20,24 +23,37 @@
             </ul>
         </nav>
     </header>
-    <aside id="aside" class="d-none">
+    <aside id="aside">
         <h1>어사이드</h1>
-    <nav>
-        <h1>메인메뉴</h1>
-        <ul>
-            <li>학습가이드</li>
-            <li>강좌선택</li>
-        </ul>
-    </nav>
+        <nav>
+            <h1>메인메뉴</h1>
+            <ul>
+                <li>학습가이드</li>
+                <li>강좌선택</li>
+            </ul>
+        </nav>
     </aside>
     <section>
         <h1>새로운강좌</h1>
     </section>
-    <section>
+    <section class="open-lecture-content">
+        <!--li는 박스로 쓸 수 없다.-->
+        <!--li안에 div를 넣을 수 없음-->
         <h1>강의목록</h1>
-        <div> <!--컨텐츠 작성해보기 숙제-->
-            <div></div> <!--li는 박스로 쓸 수 없다.--><!--li안에 div를 넣을 수 없음-->
-        </div>
-    </section>   
+        <ul>
+            <li>
+                <a href="">오라클 프로그래밍</a>
+                <img src="../images/course/img-oracle-sm.png">
+                <span>
+                    <span>99,000원</span>
+                    <span><span>10,000</span>원</span>
+                </span>
+                <span>newlec</span>
+                <span>수정일:2017-01-01</span>
+            </li>
+        </ul>
+
+    </section>
 </body>
+
 </html>

@@ -125,3 +125,17 @@ a{
 #aside{
     background-color: red;
 }
+
+.open-lecture-content li>*{
+    margin-left: 10px;
+}
+
+.open-lecture-content li{
+    /* position: relative; */
+}
+
+.open-lecture-content li>img{
+    width: 100px;
+    margin-left: 0;
+    float: left;
+}
