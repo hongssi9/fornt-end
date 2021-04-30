@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
     requestButton.onclick = function(e){
         var request = new window.XMLHttpRequest();
         //request.open("GET","ex1.txt",false); //비동기식
-        request.open("GET","http://localhost:8080/api/notice/list",false);
+        request.open("GET","http://localhost:8080/api/notice/list",true); //false생략하면 기본값은 true
         request.send(null);
         //cross request !!
 
