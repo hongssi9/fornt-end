@@ -59,6 +59,7 @@ body{
     left: 50%;
     transform: translate(-50%);
     width: 460px;
+    /* top: 80px; */
 }
 
 .btn-wrapper{
