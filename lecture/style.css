@@ -123,19 +123,44 @@ a{
 }
 
 #aside{
-    background-color: red;
+    background-color: rgb(230, 222, 222);
 }
 
 .open-lecture-content li>*{
-    margin-left: 10px;
+
 }
 
 .open-lecture-content li{
-    /* position: relative; */
+    display: grid;
+    /* width: 80%; */
+    height: 90px;
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "img title"
+    "img price"
+    "img info"
+    ;
+    padding: 10px;
+    background: url("../images/course/bg-title-normal-box-l.png") no-repeat right bottom;
 }
 
-.open-lecture-content li>img{
-    width: 100px;
-    margin-left: 0;
-    float: left;
+.open-lecture-content li> .img{
+    grid-area: img;
+    width: 100%;
+}
+
+.open-lecture-content li> .title{
+    grid-area: title;
+    
+}
+
+.open-lecture-content li> .price{
+    grid-area: price;
+    
+}
+
+.open-lecture-content li> .info{
+    grid-area: info;
+    
 }
