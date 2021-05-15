@@ -94,6 +94,7 @@ h3 { /*휴대전화, 이메일 선택자만 위에 텍스트 띄웠음*/
     color: white;
     cursor: pointer;
     /* margin: 10px; 마진을 주니까 옆으로 삐져나옴 */ 
+    
 }
 .btn:hover{
     background-color: rgb(104, 151, 65);
